@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Information" width="1280" height="650" titletext="New Form" background="#20b2aa" onload="Form_Information_onload">
+    <Layouts>
+      <Layout height="650" width="1280">
+        <Tab id="Tab00" taborder="0" tabindex="0" left="0" onchanged="Common_onchanged" multiline="false" showtabbuttonicon="false" showextrabutton="true" onextrabuttonclick="Tab00_onextrabuttonclick" width="100.00%" top="10" bottom="0.00%">
+          <Tabpages>
+            <Tabpage id="tabpage00" text="Default table search" url="FrameBase::Form_Search.xfdl" background="white"/>
+          </Tabpages>
+        </Tab>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[include "FrameBase::Server.xjs";
+include "FrameBase::ServerAPI.xjs";
+const FRAME_UPDATE_URL ="FrameBase::Form_Update.xfdl"
+const FRAME_SEARCH_URL = "FrameBase::Form_Search.xfdl"
+const FRAME_ADD_URL = "FrameBase::Form_Add.xfdl"
+const FRAME_UPDATE = "update"
+const FRAME_SEARCH = "search"
+const FRAME_ADD= "add"
+const FRAME_SEARCH_PARAM= {
+	id: FRAME_SEARCH,
+	url: FRAME_SEARCH_URL,
+	title: "Search Screen"
+}
+const FRAME_UPDATE_PARAM= {
+	id: FRAME_UPDATE,
+	url: FRAME_UPDATE_URL,
+	title: "Update Screen"
+}
+const FRAME_ADD_PARAM= {
+	id: FRAME_ADD,
+	url: FRAME_ADD_URL,
+	title: "Add Screen"
+}
+var tab_page_index= 0
+this.FuncNewTabPageHandler= function (frame)
+{
+	var frame_param
+	if(frame === FRAME_UPDATE)
+		frame_param= FRAME_UPDATE_PARAM
+	else if(frame === FRAME_SEARCH) 
+		frame_param= FRAME_SEARCH_PARAM
+	else if(frame === FRAME_ADD)
+		frame_param= FRAME_ADD_PARAM
+		
+	var nIndex = this.Tab00.insertTabpage( frame_param.id+tab_page_index,
+										tab_page_index,
+										frame_param.url,
+										frame_param.title+tab_page_index );
+	++tab_page_index;
+};
+
+this.Tab00_onextrabuttonclick = function(obj:nexacro.Tab,e:nexacro.TabMouseEventInfo)
+{
+	//this.Tab00.Tabpage1.
+	//trace("get index: "+e.index)
+	this.Tab00.removeTabpage(e.index)
+};
+
+this.AddUpdate_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.FuncNewTabPageHandler(FRAME_UPDATE)
+};
+
+this.AddSearch_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.FuncNewTabPageHandler(FRAME_SEARCH)
+};
+
+this.btn_Add_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.FuncNewTabPageHandler(FRAME_ADD)
+};
+
+this.Form_Information_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	trace("he")
+	//way1
+		this.fn_loadData()
+	//way2
+		/*
+		this.setAllow(true)
+		//[GET]
+		this.MyAPIGet()
+		
+		*/
+		
+		//[POST]
+		//this.MyAPIPost()
+};
+
+this.DataObject00_onsuccess = function(obj:nexacro.DataObject,e:nexacro.DataObjectEventInfo)
+{
+	this.onsuccess(obj, e)
+};
+
+this.DataObject00_onerror = function(obj:nexacro.DataObject,e:nexacro.DataObjectErrorEventInfo)
+{
+	this.onerror(obj, e)
+};
+
+this.MyAPIDeleteHanlder= function (id)
+{
+	if(!this.getAllow()) return;
+	this.MyAPIDelete(id)
+};
+
+this.MyAPIPostHanlder= function (emp)
+{
+	if(!this.getAllow()) return;
+	
+	var empPrase = {
+ 	  "NUM_QD": emp.numQD.value,
+ 	  "DATE_APPLY": this.formateDate(emp.date_apply.value),
+ 	  "NAME": emp.name.value,
+ 	  "STATUS": emp.status.value,
+ 	  "POSITION": emp.position.value,
+ 	  "DEGREE": emp.degree.value,
+	  "LEVEL_APPLY": emp.level_apply.value,
+ 	  "COE_SALARY": emp.coe_salary.value,
+ 	  "ALLOWANCE_COE_SALARY": emp.allow_coe_salary.value,
+ 	  "ALLOWANCE_POSITION": emp.allow_position.value,
+ 	  "ALLOWANCE_RESPONSIBILITY": emp.allow_response.value,
+ 	  "DATE_COE_SALARY_NEXT_RISE": this.formateDate(emp.date_coe_salary_next_rise.value),
+ 	  "APPLING": emp.appling.value
+ 	};
+	trace("this date: "+ this.formateDate(emp.date_apply.value))
+	this.MyAPIPost(empPrase)
+};
+
+this.formateDate= function (dateString)
+{
+	return dateString.substr(0, 4) + "/" + dateString.substr(4, 2) +"/" +dateString.substr(6, 2);
+};]]></Script>
+    <Objects>
+      <Dataset id="ds_Temp">
+        <ColumnInfo>
+          <Column id="Id" type="STRING" size="256"/>
+          <Column id="Name" type="STRING" size="256"/>
+          <Column id="Level" type="INT" size="1"/>
+        </ColumnInfo>
+      </Dataset>
+      <DataObject id="DataObject00" ondatachanged="DataObject00_ondatachanged" onsuccess="DataObject00_onsuccess" onerror="DataObject00_onerror"/>
+    </Objects>
+  </Form>
+</FDL>

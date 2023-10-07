@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script version="1.0" type="xscript5.1"><![CDATA[const url= "http://localhost:8080/regulation"
+var allow= false
+this.setAllow= function (permission)
+{
+	allow= permission
+};
+this.getAllow= function ()
+{
+	return allow
+};
+this.MyAPIGet= function ()
+{
+	//allow
+	if(!allow) return;
+	//do get
+	var header = { "Content-Type": "application/x-www-form-urlencoded" };
+	var json_param = {};
+	this.DataObject00.request("no2", "GET", url, json_param);
+};
+
+this.MyAPIPost= function (emp)
+{
+	//allow
+	if(!allow) return;
+	//do post
+ 	var header = { "Content-Type": "application/json;charset=UTF-8" }; 
+/*
+ 	var emp = {
+ 	  "NUM_QD": "viet080702viet080702",
+ 	  "DATE_APPLY": "2022/12/02",
+ 	  "NAME": "Hồ VĂn H",
+ 	  "STATUS": "Chính thức",
+ 	  "POSITION": "Kế tóan",
+ 	  "DEGREE": "Đại học",
+ 	  "COE_SALARY": "4.5",
+ 	  "ALLOWANCE_COE_SALARY": "2",
+ 	  "ALLOWANCE_POSITION": "0.2",
+ 	  "ALLOWANCE_RESPONSIBILITY": "0.4",
+ 	  "DATE_COE_SALARY_NEXT_RISE": "2022/12/02",
+ 	  "APPLING": "true"
+ 	};
+*/
+	trace(emp)
+ 	var json_param = {
+ 	  "httpheader" : header,
+ 	  "postdata" : JSON.stringify(emp), 
+ 	  "async" : true
+ 	};
+ 
+ 	this.DataObject00.request("no3", "POST", url, json_param);
+
+};
+
+this.MyAPIDelete= function (id)
+{
+	//allow
+	if(!allow) return;
+	//do get
+	var header = { "Content-Type": "application/x-www-form-urlencoded" };
+	var json_param = {};
+	this.DataObject00.request("no4", "DELETE", url+"/"+id);
+	trace(url+"/"+id)
+}
+
+this.MyAPIPut= function (id,emp)
+{
+}
+
+this.onsuccess = function(obj,e)
+{
+	var ds_Track_Working=  nexacro.getApplication().ds_Track_Working
+	trace("hmmm DataObject00_onsuccess")
+	var data= JSON.parse(e.response)
+	//ds_Track_Working.loadJSON(data)
+	for (let i = 0; i < data.length; i++) {
+		this.AddNewEmployeeHanlder(data[i]);
+	}
+
+	trace("check data id: " +data[0].NUM_QD)
+};
+
+this.onerror = function(obj,e)
+{
+	trace("hmmm DataObject00_onerror")
+	trace(obj.getResponse())
+};
+this.AddEleEachColumn= function(ds_Track_Working, nRow, input){
+	ds_Track_Working.setColumn(nRow, input.id, input.value)
+}
+this.AddNewEmployeeHanlder= function(emp){
+	var ds_Track_Working=  nexacro.getApplication().ds_Track_Working
+	var nRow =ds_Track_Working.addRow();
+	//var nAdd=ds_Track_Working.set(nRow, "NUM_QD", "NUM QD me ADD");
+	trace("check: "+ nRow)
+	/*
+	numQD, date_apply, name, status,
+				position, degree, level_apply, coe_salary, allow_coe_salary,
+				allow_position, allow_response, date_coe_salary_next_rise, appling
+				*/
+	//numQD
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "NUM_QD", value: emp.NUM_QD})
+	//date_apply
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "DATE_APPLY", value: emp.DATE_APPLY})
+	//name
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "NAME", value: emp.NAME})
+	//status
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "STATUS", value: emp.STATUS})
+	//position
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "POSITION", value: emp.POSITION})
+	//degree
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "DEGREE", value: emp.DEGREE})
+	//level_apply
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "LEVEL_APPLY", value: emp.LEVEL_APPLY})
+	//coe_salary
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "COE_SALARY", value: emp.COE_SALARY})
+	//allow_coe_salary
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "ALLOWANCE_COE_SALARY", value: emp.ALLOWANCE_COE_SALARY})
+	//allow_position
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "ALLOWANCE_POSITION", value: emp.ALLOWANCE_POSITION})
+	//allow_response
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "ALLOWANCE_RESPONSIBILITY", value: emp.ALLOWANCE_RESPONSIBILITY})
+	//date_coe_salary_next_rise
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "DATE_COE_SALARY_NEXT_RISE", value: emp.DATE_COE_SALARY_NEXT_RISE})
+	//appling
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "APPLING", value: emp.APPLING})
+	//delete
+	this.AddEleEachColumn(ds_Track_Working, nRow, {id: "Delete", value: "false"})
+	
+	ds_Track_Working.applyChange()
+	//this.ClearInputHandler()
+}]]></Script>

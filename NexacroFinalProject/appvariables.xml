@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppVariables version="2.0">
+  <Datasets>
+    <Dataset id="ds_Store">
+      <ColumnInfo>
+        <Column id="NUM_QD" type="STRING" size="256"/>
+        <Column id="DATE_APPLY" type="DATE" size="256"/>
+        <Column id="NAME" type="STRING" size="256"/>
+        <Column id="STATUS" type="STRING" size="256"/>
+        <Column id="POSITION" type="STRING" size="256"/>
+        <Column id="DEGREE" type="STRING" size="256"/>
+        <Column id="LEVEL_APPLY" type="INT" size="256"/>
+        <Column id="COE_SALARY" type="FLOAT" size="256"/>
+        <Column id="ALLOWANCE_COE_SALARY" type="FLOAT" size="256"/>
+        <Column id="ALLOWANCE_POSITION" type="FLOAT" size="256"/>
+        <Column id="ALLOWANCE_RESPONSIBILITY" type="FLOAT" size="256"/>
+        <Column id="DATE_COE_SALARY_NEXT_RISE" type="DATE" size="256"/>
+        <Column id="APPLING" type="STRING" size="256"/>
+      </ColumnInfo>
+      <Rows>
+        <Row>
+          <Col id="NUM_QD">QD01/2017</Col>
+          <Col id="DATE_APPLY">06/05/2015</Col>
+          <Col id="NAME">Võ Văn C</Col>
+          <Col id="STATUS">Chính thức</Col>
+          <Col id="POSITION">Nhân viên KD</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">2</Col>
+          <Col id="COE_SALARY">2.67</Col>
+          <Col id="ALLOWANCE_POSITION">0.1</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">06/05/2018</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+        <Row>
+          <Col id="STATUS">Chính thức</Col>
+          <Col id="POSITION">Kế toán</Col>
+          <Col id="NAME">Lê Thị C</Col>
+          <Col id="DATE_APPLY">10/07/2017</Col>
+          <Col id="NUM_QD">QD01/2017</Col>
+          <Col id="DEGREE">Trung cấp</Col>
+          <Col id="LEVEL_APPLY">4</Col>
+          <Col id="COE_SALARY">2.46</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">10/07/2019</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+        <Row>
+          <Col id="STATUS">Chính thức</Col>
+          <Col id="POSITION">Nhân viên KD</Col>
+          <Col id="NAME">Trần Văn H</Col>
+          <Col id="DATE_APPLY">10/10/2017</Col>
+          <Col id="NUM_QD">QD01/2017</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">5</Col>
+          <Col id="COE_SALARY">3.66</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">10/10/2020</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+        <Row>
+          <Col id="STATUS">Chính thức</Col>
+          <Col id="POSITION">Phó giám đốc</Col>
+          <Col id="NAME">Huỳnh Thị B</Col>
+          <Col id="DATE_APPLY">03/02/2017</Col>
+          <Col id="NUM_QD">QD03/2017</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">8</Col>
+          <Col id="COE_SALARY">4.65</Col>
+          <Col id="ALLOWANCE_POSITION">0.1</Col>
+          <Col id="ALLOWANCE_RESPONSIBILITY">0.4</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">03/02/2020</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+      </Rows>
+    </Dataset>
+    <Dataset id="gds0">
+      <ColumnInfo>
+        <Column id="NUM_QD" type="STRING" size="256"/>
+        <Column id="DATE_APPLY" type="DATE" size="256"/>
+        <Column id="NAME" type="STRING" size="256"/>
+        <Column id="STATUS" type="STRING" size="256"/>
+        <Column id="POSITION" type="STRING" size="256"/>
+        <Column id="DEGREE" type="STRING" size="256"/>
+        <Column id="LEVEL_APPLY" type="INT" size="256"/>
+        <Column id="COE_SALARY" type="FLOAT" size="256"/>
+        <Column id="ALLOWANCE_COE_SALARY" type="FLOAT" size="256"/>
+        <Column id="ALLOWANCE_POSITION" type="FLOAT" size="256"/>
+        <Column id="ALLOWANCE_RESPONSIBILITY" type="FLOAT" size="256"/>
+        <Column id="DATE_COE_SALARY_NEXT_RISE" type="DATE" size="256"/>
+        <Column id="APPLING" type="STRING" size="256"/>
+        <Column id="Delete" type="STRING" size="256"/>
+      </ColumnInfo>
+      <Rows>
+        <Row>
+          <Col id="NUM_QD">QD01/2017</Col>
+          <Col id="DATE_APPLY">06/05/2015</Col>
+          <Col id="NAME">Võ Văn C</Col>
+          <Col id="STATUS">Bán thời gian</Col>
+          <Col id="POSITION">Nhân viên KD</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">2</Col>
+          <Col id="COE_SALARY">2.67</Col>
+          <Col id="ALLOWANCE_POSITION">0.1</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">06/05/2018</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+        <Row>
+          <Col id="STATUS">Chính thức</Col>
+          <Col id="POSITION">Kế toán</Col>
+          <Col id="NAME">Lê Thị C</Col>
+          <Col id="DATE_APPLY">10/07/2017</Col>
+          <Col id="NUM_QD">QD01/2017</Col>
+          <Col id="DEGREE">Trung cấp</Col>
+          <Col id="LEVEL_APPLY">4</Col>
+          <Col id="COE_SALARY">2.46</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">10/07/2019</Col>
+          <Col id="APPLING">false</Col>
+          <Col id="Delete">true</Col>
+        </Row>
+        <Row>
+          <Col id="STATUS">Thử việc</Col>
+          <Col id="POSITION">Nhân viên KD</Col>
+          <Col id="NAME">Trần Văn H</Col>
+          <Col id="DATE_APPLY">10/10/2017</Col>
+          <Col id="NUM_QD">QD01/2017</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">15</Col>
+          <Col id="COE_SALARY">3.66</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">10/10/2020</Col>
+          <Col id="APPLING">true</Col>
+          <Col id="ALLOWANCE_COE_SALARY">2</Col>
+        </Row>
+        <Row>
+          <Col id="STATUS">Chính thức</Col>
+          <Col id="POSITION">Phó giám đốc</Col>
+          <Col id="NAME">Huỳnh Thị B</Col>
+          <Col id="DATE_APPLY">03/02/2017</Col>
+          <Col id="NUM_QD">QD03/2017</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">8</Col>
+          <Col id="COE_SALARY">4.65</Col>
+          <Col id="ALLOWANCE_POSITION">0.1</Col>
+          <Col id="ALLOWANCE_RESPONSIBILITY">0.4</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">03/02/2020</Col>
+          <Col id="APPLING">false</Col>
+        </Row>
+        <Row>
+          <Col id="NUM_QD">QD01/2017</Col>
+          <Col id="DATE_APPLY">06/05/2015</Col>
+          <Col id="NAME">Võ Văn C</Col>
+          <Col id="STATUS">Bán thời gian</Col>
+          <Col id="POSITION">Nhân viên KD</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">2</Col>
+          <Col id="COE_SALARY">2.67</Col>
+          <Col id="ALLOWANCE_POSITION">0.1</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">06/05/2018</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+        <Row>
+          <Col id="NUM_QD">QD01/2017</Col>
+          <Col id="DATE_APPLY">10/07/2017</Col>
+          <Col id="NAME">Lê Thị C</Col>
+          <Col id="STATUS">Chính thức</Col>
+          <Col id="POSITION">Kế toán</Col>
+          <Col id="DEGREE">Trung cấp</Col>
+          <Col id="LEVEL_APPLY">4</Col>
+          <Col id="COE_SALARY">2.46</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">10/07/2019</Col>
+          <Col id="APPLING">false</Col>
+        </Row>
+        <Row>
+          <Col id="NUM_QD">QD01/2017</Col>
+          <Col id="DATE_APPLY">10/10/2017</Col>
+          <Col id="NAME">Trần Văn H</Col>
+          <Col id="STATUS">Thử việc</Col>
+          <Col id="POSITION">Nhân viên KD</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">15</Col>
+          <Col id="COE_SALARY">3.66</Col>
+          <Col id="ALLOWANCE_COE_SALARY">2</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">10/10/2020</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+        <Row>
+          <Col id="NUM_QD">QD03/2017</Col>
+          <Col id="DATE_APPLY">03/02/2017</Col>
+          <Col id="NAME">Huỳnh Thị B</Col>
+          <Col id="STATUS">Chính thức</Col>
+          <Col id="POSITION">Phó giám đốc</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">8</Col>
+          <Col id="COE_SALARY">4.65</Col>
+          <Col id="ALLOWANCE_POSITION">0.1</Col>
+          <Col id="ALLOWANCE_RESPONSIBILITY">0.4</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">03/02/2020</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+        <Row>
+          <Col id="NUM_QD">QD02/2018</Col>
+          <Col id="DATE_APPLY">12/12/2017</Col>
+          <Col id="NAME">Nguyễn Văn D</Col>
+          <Col id="STATUS">Thử việc</Col>
+          <Col id="POSITION">Kế toán</Col>
+          <Col id="DEGREE">Cao Đẳng</Col>
+          <Col id="LEVEL_APPLY">2</Col>
+          <Col id="COE_SALARY">2.95</Col>
+          <Col id="ALLOWANCE_COE_SALARY">0.2</Col>
+          <Col id="ALLOWANCE_POSITION">0.15</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">12/12/2018</Col>
+          <Col id="APPLING">false</Col>
+        </Row>
+        <Row>
+          <Col id="NUM_QD">QD02/2018</Col>
+          <Col id="DATE_APPLY">25/03/2018</Col>
+          <Col id="NAME">Lê Thị A</Col>
+          <Col id="STATUS">Bán thời gian</Col>
+          <Col id="POSITION">Nhân viên KD</Col>
+          <Col id="DEGREE">Trung cấp</Col>
+          <Col id="LEVEL_APPLY">3</Col>
+          <Col id="COE_SALARY">2.75</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">25/03/2019</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+        <Row>
+          <Col id="NUM_QD">QD03/2018</Col>
+          <Col id="DATE_APPLY">08/08/2018</Col>
+          <Col id="NAME">Phạm Văn E</Col>
+          <Col id="STATUS">Chính thức</Col>
+          <Col id="POSITION">Quản lý</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">6</Col>
+          <Col id="COE_SALARY">4.35</Col>
+          <Col id="ALLOWANCE_POSITION">0.2</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">08/08/2019</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+        <Row>
+          <Col id="NUM_QD">QD03/2018</Col>
+          <Col id="DATE_APPLY">14/09/2018</Col>
+          <Col id="NAME">Trần Thị F</Col>
+          <Col id="STATUS">Bán thời gian</Col>
+          <Col id="POSITION">Nhân viên KD</Col>
+          <Col id="DEGREE">Trung cấp</Col>
+          <Col id="LEVEL_APPLY">2</Col>
+          <Col id="COE_SALARY">2.55</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">14/09/2019</Col>
+          <Col id="APPLING">false</Col>
+        </Row>
+        <Row>
+          <Col id="NUM_QD">QD04/2019</Col>
+          <Col id="DATE_APPLY">03/04/2019</Col>
+          <Col id="NAME">Hoàng Văn G</Col>
+          <Col id="STATUS">Chính thức</Col>
+          <Col id="POSITION">Kế toán</Col>
+          <Col id="DEGREE">Đại Học</Col>
+          <Col id="LEVEL_APPLY">4</Col>
+          <Col id="COE_SALARY">3.15</Col>
+          <Col id="ALLOWANCE_COE_SALARY">0.1</Col>
+          <Col id="ALLOWANCE_RESPONSIBILITY">0.3</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">03/04/2020</Col>
+          <Col id="APPLING">true</Col>
+        </Row>
+        <Row>
+          <Col id="NUM_QD">QD04/2019</Col>
+          <Col id="DATE_APPLY">22/07/2019</Col>
+          <Col id="NAME">Trần Văn I</Col>
+          <Col id="STATUS">Thử việc</Col>
+          <Col id="POSITION">Nhân viên KD</Col>
+          <Col id="DEGREE">Trung cấp</Col>
+          <Col id="LEVEL_APPLY">3</Col>
+          <Col id="COE_SALARY">2.75</Col>
+          <Col id="DATE_COE_SALARY_NEXT_RISE">22/07/2020</Col>
+          <Col id="APPLING">false</Col>
+        </Row>
+      </Rows>
+    </Dataset>
+    <Dataset id="ds_Track_Working">
+      <ColumnInfo>
+        <Column id="NUM_QD" type="STRING" size="256"/>
+        <Column id="DATE_APPLY" type="DATE" size="256"/>
+        <Column id="NAME" type="STRING" size="256"/>
+        <Column id="STATUS" type="STRING" size="256"/>
+        <Column id="POSITION" type="STRING" size="256"/>
+        <Column id="DEGREE" type="STRING" size="256"/>
+        <Column id="LEVEL_APPLY" type="INT" size="256"/>
+        <Column id="COE_SALARY" type="FLOAT" size="256"/>
+        <Column id="ALLOWANCE_COE_SALARY" type="FLOAT" size="256"/>
+        <Column id="ALLOWANCE_POSITION" type="FLOAT" size="256"/>
+        <Column id="ALLOWANCE_RESPONSIBILITY" type="FLOAT" size="256"/>
+        <Column id="DATE_COE_SALARY_NEXT_RISE" type="DATE" size="256"/>
+        <Column id="APPLING" type="STRING" size="256"/>
+        <Column id="Delete" type="STRING" size="256"/>
+      </ColumnInfo>
+    </Dataset>
+  </Datasets>
+  <Variables/>
+  <DataObjects/>
+</AppVariables>

@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Mooc1" width="1500" height="970" titletext="New Form" border="transparent">
+    <Layouts>
+      <Layout height="970" width="1500">
+        <Div id="Div00" taborder="0" text="Div00" left="0" top="0" width="100%" height="440" color="transparent" background="#019c9e" font="bold 17px/normal &quot;Malgun Gothic&quot;" border="none" borderRadius="none" minwidth="1500" maxwidth="">
+          <Layouts>
+            <Layout>
+              <Static id="stc_Welcome" taborder="0" text="WELCOME TO WEDDING VENDOR" left="2%" top="6" width="250" height="15" onclick="Div00_Static00_onclick" font="15px/normal &quot;Malgun Gothic&quot;" color="#eef1ef" borderRadius="15px"/>
+              <Menu id="Menu00" taborder="1" left="500" top="73" width="100" height="25" background="transparent" font="12px/normal &quot;Malgun Gothic&quot;" initvalueid="fd"/>
+              <ImageViewer id="ImageViewer00" taborder="2" top="9" width="30" height="25" image="url('imagerc::search.png')" onclick="Div00_ImageViewer00_onclick" stretch="fit" background="transparent" border="0px none darkmagenta" right="7.27%"/>
+              <Button id="btn_Help" taborder="3" text="HELP" top="4" width="70" height="32" font="15px/normal &quot;Malgun Gothic&quot;,&quot;Agency FB&quot;" background="transparent" border="0px none" cursor="none" right="37%" color="#efefef"/>
+              <Button id="btn_Pricing" taborder="4" text="PRICING" top="4" width="70" height="7.27%" background="transparent" border="0px none" font="15px/normal &quot;Malgun Gothic&quot;,&quot;Agency FB&quot;" right="32.33%" color="#efefef"/>
+              <Button id="btn_Couple" taborder="5" text="I'M COUPLE" top="4" width="90" height="7.27%" background="transparent" border="0px none" font="15px/normal &quot;Malgun Gothic&quot;,&quot;Agency FB&quot;" onclick="Div00_btn_Couple_onclick" right="25%" color="#efefef"/>
+              <Button id="btn_Vendor" taborder="6" text="ARE YOU VENDOR?" top="4" width="120" height="7.27%" background="transparent" border="0px none" font="15px/normal &quot;Malgun Gothic&quot;,&quot;Agency FB&quot;" right="15.33%" color="#efefef"/>
+              <Button id="btn_Login" taborder="7" text="LOGIN" top="5" width="70" height="7.5%" background="transparent" border="0px none" font="15px/normal &quot;Malgun Gothic&quot;,&quot;Agency FB&quot;" right="10%" color="#efefef"/>
+              <Div id="Div00" taborder="8" left="0" top="38" width="100%" height="105" background="#00aeaf" text="" maxwidth="2000">
+                <Layouts>
+                  <Layout>
+                    <ImageViewer id="imgv_Logo" taborder="0" left="29" top="15" width="79" height="74" image="url('imagerc::LogoWeddingVendor.jfif')" stretch="fit" border="0px none"/>
+                    <Div id="Div00" taborder="1" text="Div00" left="109" top="15" width="211" height="74" border="10px none darkslateblue">
+                      <Layouts>
+                        <Layout>
+                          <Static id="Static00" taborder="0" text="WEDDING" left="10" top="4" width="120" height="33" onclick="Div00_Div00_Div00_Static00_onclick" font="bold 24px/normal &quot;Malgun Gothic&quot;" color="#eef1ef"/>
+                          <Static id="Static01" taborder="1" text="VENDOR -----" left="10" top="39" width="120" height="22" font="bold 16px/normal &quot;Malgun Gothic&quot;" color="#eef1ef"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                    <Menu width="1050" height="50" id="Menu01" top="35" taborder="2" innerdataset="innerdataset" captioncolumn="captioncolumn" checkboxcolumn="checkboxcolumn" enablecolumn="enablecolumn" hotkeycolumn="hotkeycolumn" iconcolumn="iconcolumn" idcolumn="idcolumn" levelcolumn="levelcolumn" userdatacolumn="userdatacolumn" onmenuclick="Div00_Div00_Menu01_onmenuclick" autohotkey="true" font="bold 18px/normal &quot;Malgun Gothic&quot;" background="transparent" right="2.67%">
+                      <Dataset id="innerdataset">
+                        <ColumnInfo>
+                          <Column id="captioncolumn" size="256"/>
+                          <Column id="checkboxcolumn" size="256"/>
+                          <Column id="enablecolumn" size="256"/>
+                          <Column id="hotkeycolumn" size="256"/>
+                          <Column id="iconcolumn" size="256"/>
+                          <Column id="idcolumn" size="256"/>
+                          <Column id="levelcolumn" size="256"/>
+                          <Column id="userdatacolumn" size="256"/>
+                        </ColumnInfo>
+                        <Rows>
+                          <Row>
+                            <Col id="captioncolumn">HOME v</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">imagerc::LogoWeddingVendor.jfif</Col>
+                            <Col id="levelcolumn">0</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">LISTING  ∨</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">&amp;or;</Col>
+                            <Col id="levelcolumn">0</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">VENDOR ∨</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">0</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">SUPPLIERS ∨</Col>
+                            <Col id="levelcolumn">0</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">PLANNING TOOLS ∨</Col>
+                            <Col id="levelcolumn">0</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">FEATURES ∨</Col>
+                            <Col id="levelcolumn">0</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">REAL WEDDING ∨</Col>
+                            <Col id="levelcolumn">0</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                          <Row>
+                            <Col id="captioncolumn">ab</Col>
+                            <Col id="checkboxcolumn"/>
+                            <Col id="enablecolumn">daf</Col>
+                            <Col id="hotkeycolumn">bxsxc</Col>
+                            <Col id="iconcolumn">afds</Col>
+                            <Col id="levelcolumn">1</Col>
+                          </Row>
+                        </Rows>
+                      </Dataset>
+                    </Menu>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div01" taborder="9" text="Div01" left="0" top="145" width="1500" height="295" background="#0c0c0c"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <ImageViewer id="ImageViewer00" taborder="1" left="0" top="145" width="100.00%" height="299" image="url('imagerc::page-header-img.jpg')" border="0px none" text="" onclick="ImageViewer00_onclick"/>
+        <Div id="Div01" taborder="2" text="Div01" left="1" top="143" width="100%" height="299" background="black" opacity="0.7">
+          <Layouts>
+            <Layout>
+              <Div id="Div00" taborder="0" text="Div00" left="31.93%" top="2" width="38.93%" height="278">
+                <Layouts>
+                  <Layout>
+                    <ImageViewer id="ImageViewer00" taborder="0" left="39.55%" top="9" width="139" height="130" image="url('imagerc::kisspng-computer-icons-padlock-web-typography-clip-art-schloss-5b1221d49849d5.3504379915279149646238.png')" stretch="fit" borderRadius="70px" border="4px solid azure" background="transparent" onclick="Div01_Div00_ImageViewer00_onclick"/>
+                    <Static id="Static00" taborder="1" text="Welcome back to your account" left="7.88%" top="150" width="510" height="75" font="35px/normal &quot;Malgun Gothic&quot;" color="#e8e8e8"/>
+                    <Static id="Static01" taborder="2" text="We're happy to have you back" left="25.68%" top="211" width="300" height="29" font="bold 20px/normal &quot;Malgun Gothic&quot;" onclick="Div01_Div00_Static01_onclick" color="#dddddd"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div02" taborder="3" text="Div02" left="-1" top="441" width="100%" height="49" border="0px none, 0px none, 2px solid #606060">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="HOME" left="40" top="7" width="60" height="34" background="transparent" border="0px none"/>
+              <Button id="Button00_00" taborder="1" text="LOGIN PAGE" left="121" top="7" width="80" height="34" background="transparent" border="0px none"/>
+              <Static id="Static00" taborder="2" text="/" left="101" top="7" width="19" height="34" font="bold 25px/normal &quot;Malgun Gothic&quot;"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div03" taborder="4" left="0" top="490" width="100%" height="470">
+          <Layouts>
+            <Layout>
+              <Div id="Div00" taborder="0" text="Div00" left="4.33%" top="29" width="42%" height="421" border="2px solid #7f7f7f">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="VENOR LOGIN" left="52" top="19" width="243" height="60" font="bold 35px/normal &quot;Malgun Gothic&quot;"/>
+                    <Static id="Static01" taborder="1" text="E-Mail*" left="50" top="91" width="122" height="36" font="24px/normal &quot;Malgun Gothic&quot;" onclick="Div03_Div00_Static01_onclick"/>
+                    <Edit id="edit_Vendor_Email" taborder="2" left="8.15%" top="141" width="81.79%" height="13.91%" tooltiptext="E-Mail" displaynulltext="E-Mail" font="28px/normal &quot;Malgun Gothic&quot;"/>
+                    <Static id="Static01_00" taborder="3" text="Password*" left="53" top="211" width="122" height="36" font="24px/normal &quot;Malgun Gothic&quot;" onclick="Div03_Div00_Static01_onclick"/>
+                    <Edit id="edit_Vendor_Pass" taborder="4" left="8.47%" top="261" width="81.47%" height="58" tooltiptext="Password" displaynulltext="Password" font="28px/normal &quot;Malgun Gothic&quot;" password="true"/>
+                    <Button id="btn_Login_Vendor" taborder="5" text="LOGIN" left="52" top="339" width="136" height="50" background="yellow" font="bold 25px/normal &quot;Malgun Gothic&quot;" color="#c4c4c4" onclick="Div03_Div00_btn_Login_Vendor_onclick"/>
+                    <Static id="Static02" taborder="6" left="448" top="339" width="110" height="25" text="Forgot password?" color="#5361fd"/>
+                    <Static id="stc_Get_Vendor_Account" taborder="7" text="Move mouse here to get VENDOR Account &amp; Password test" left="348" top="2" width="253" height="80" wordWrap="english" font="bold 16px/normal &quot;Malgun Gothic&quot;" onmouseenter="Div03_Div00_stc_Get_Vendor_Account_onmouseenter" onmouseleave="Div03_Div00_stc_Get_Vendor_Account_onmouseleave"/>
+                    <Static id="stc_Email_mess" taborder="8" text="Account input must be fill" left="37.06%" top="90" width="52.72%" height="36" font="24px/normal &quot;Malgun Gothic&quot;" onclick="Div03_Div00_Static01_onclick" textAlign="right" color="red" visible="false"/>
+                    <Static id="stc_Password_mess" taborder="9" text="Password input must be fill" left="37.06%" top="213" width="53.03%" height="36" font="24px/normal &quot;Malgun Gothic&quot;" onclick="Div03_Div00_Static01_onclick" textAlign="right" color="red" visible="false"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_00" taborder="1" text="Div00" top="30" width="42%" height="420" border="2px solid #7f7f7f" right="3.93%">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="COUPLE LOGIN" left="8.31%" top="19" width="305" height="60" font="bold 35px/normal &quot;Malgun Gothic&quot;" onclick="Div03_Div00_00_Static00_onclick"/>
+                    <Static id="Static01" taborder="1" text="E-Mail*" left="7.99%" top="91" width="122" height="36" font="24px/normal &quot;Malgun Gothic&quot;" onclick="Div03_Div00_Static01_onclick"/>
+                    <Edit id="edt_Couple_Email" taborder="2" left="8.15%" top="141" width="81.79%" height="58" tooltiptext="E-Mail" displaynulltext="E-Mail" font="28px/normal &quot;Malgun Gothic&quot;"/>
+                    <Static id="Static01_00" taborder="3" text="Password*" left="8.47%" top="211" width="122" height="36" font="24px/normal &quot;Malgun Gothic&quot;" onclick="Div03_Div00_Static01_onclick"/>
+                    <Edit id="edt_Couple_Pass" taborder="4" left="8.15%" top="261" width="81.47%" height="58" tooltiptext="Password" displaynulltext="Password" font="28px/normal &quot;Malgun Gothic&quot;" password="true"/>
+                    <Button id="btn_Login_Couple" taborder="5" text="LOGIN" left="8.31%" top="339" width="136" height="50" background="yellow" font="bold 25px/normal &quot;Malgun Gothic&quot;" color="#c4c4c4" onclick="Div03_Div00_00_btn_Login_Couple_onclick"/>
+                    <Static id="Static02" taborder="6" left="448" width="110" height="25" text="Forgot password?" color="#5361fd" bottom="12.5%"/>
+                    <Static id="stc_Get_Couple_Account" taborder="7" text="Move mouse here to get VENDOR Account &amp; Password test" left="348" top="2" width="253" height="80" wordWrap="english" font="bold 16px/normal &quot;Malgun Gothic&quot;" onmouseenter="Div03_Div00_00_stc_Get_Couple_Account_onmouseenter" onmouseleave="Div03_Div00_00_stc_Get_Couple_Account_onmouseleave"/>
+                    <Static id="stc_Email_mess" taborder="8" text="Account input must be fill" left="37.06%" top="90" width="52.72%" height="36" font="24px/normal &quot;Malgun Gothic&quot;" onclick="Div03_Div00_Static01_onclick" textAlign="right" color="red" visible="false"/>
+                    <Static id="stc_Password_mess" taborder="9" text="Password input must be fill" left="37.06%" top="213" width="53.03%" height="36" font="24px/normal &quot;Malgun Gothic&quot;" onclick="Div03_Div00_Static01_onclick" textAlign="right" color="red" visible="false"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[const ACCOUNT_VENDOR_TEST = "vendoracc"
+const PASSWORD_VENDOR_TEST = "vendorpass"
+const ACCOUNT_COUPLE_TEST = "coupleacc"
+const PASSWORD_COUPLE_TEST = "couplepass"
+const GET_VENDOR_MESS= "Move mouse here to get VENDOR Account & Password test"
+const GET_VENDOR_TEST= "acc: vendoracc \npass: vendorpass"
+const GET_COUPLE_MESS= "Move mouse here to get COUPLE Account & Password test"
+const GET_COUPLE_TEST= "acc: coupleacc \npass: couplepass"
+function CheckBlank(){
+}
+
+
+this.Div03_Div00_00_btn_Login_Couple_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var acc= this.Div03.form.Div00_00.form.edt_Couple_Email.text
+	var pass= this.Div03.form.Div00_00.form.edt_Couple_Pass.text
+	//check blank
+	var accCheckBlank= ()=>{
+		if (acc === "" || acc === undefined ){
+			this.Div03.form.Div00_00.form.stc_Email_mess.set_visible(true)
+			return false
+		} 
+		this.Div03.form.Div00_00.form.stc_Email_mess.set_visible(false)
+		return true
+	}
+	
+	var passCheckBlank=()=>{
+		if (pass === "" || pass === undefined ){
+			this.Div03.form.Div00_00.form.stc_Password_mess.set_visible(true)
+			return false
+		} 
+		this.Div03.form.Div00_00.form.stc_Password_mess.set_visible(false)
+		return true
+	}
+	trace("acc: "+ accCheckBlank())
+	trace("pass: "+ passCheckBlank())
+	// if user didn't enter don't have to check credential
+	if ((accCheckBlank() || passCheckBlank()) == false ){
+		return
+	}
+//check credential
+	var checkAcc= (acc===ACCOUNT_COUPLE_TEST)
+	var checkPass= (pass===PASSWORD_COUPLE_TEST)
+	trace("check acc: " +checkAcc)
+	trace("check pass: " +checkPass)
+	if(checkAcc && checkPass)
+		this.alert("!!!Login SUCCESSFULL!!!")
+	else{
+		this.alert("!!!Login FAIL!!!")
+	}
+};
+
+this.Div03_Div00_btn_Login_Vendor_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var acc= this.Div03.form.Div00.form.edit_Vendor_Email.text
+	var pass= this.Div03.form.Div00.form.edit_Vendor_Pass.text
+//check blank
+	var accCheckBlank= ()=>{
+		if (acc === "" || acc === undefined ){
+			this.Div03.form.Div00.form.stc_Email_mess.set_visible(true)
+			return false
+		} 
+		this.Div03.form.Div00.form.stc_Email_mess.set_visible(false)
+		return true
+	}
+	
+	var passCheckBlank=()=>{
+		if (pass === "" || pass === undefined ){
+			this.Div03.form.Div00.form.stc_Password_mess.set_visible(true)
+			return false
+		} 
+		this.Div03.form.Div00.form.stc_Password_mess.set_visible(false)
+		return true
+	}
+	trace("acc: "+ accCheckBlank())
+	trace("pass: "+ passCheckBlank())
+	// if user didn't enter don't have to check credential
+	if ((accCheckBlank() || passCheckBlank()) == false ){
+		return
+	}
+//check credential
+	var checkAcc= (acc===ACCOUNT_VENDOR_TEST)
+	var checkPass= (pass===PASSWORD_VENDOR_TEST)
+	trace("check acc: " +checkAcc)
+	trace("check pass: " +checkPass)
+	if(checkAcc && checkPass)
+		this.alert("!!!Login SUCCESSFULL!!!")
+	else{
+		this.alert("!!!Login FAIL!!!")
+	}
+};
+
+
+
+this.Div03_Div00_stc_Get_Vendor_Account_onmouseenter = function(obj:nexacro.Static,e:nexacro.MouseEventInfo)
+{
+	this.Div03.form.Div00.form.stc_Get_Vendor_Account.set_text(GET_VENDOR_TEST)
+};
+
+this.Div03_Div00_stc_Get_Vendor_Account_onmouseleave = function(obj:nexacro.Static,e:nexacro.MouseEventInfo)
+{
+	this.Div03.form.Div00.form.stc_Get_Vendor_Account.set_text(GET_VENDOR_MESS)
+};
+
+
+this.Div03_Div00_00_stc_Get_Couple_Account_onmouseenter = function(obj:nexacro.Static,e:nexacro.MouseEventInfo)
+{
+	this.Div03.form.Div00_00.form.stc_Get_Couple_Account.set_text(GET_COUPLE_TEST)
+};
+
+this.Div03_Div00_00_stc_Get_Couple_Account_onmouseleave = function(obj:nexacro.Static,e:nexacro.MouseEventInfo)
+{
+	this.Div03.form.Div00_00.form.stc_Get_Couple_Account.set_text(GET_COUPLE_MESS)
+};
+]]></Script>
+    <Objects>
+      <DataObject id="DataObject00"/>
+    </Objects>
+  </Form>
+</FDL>

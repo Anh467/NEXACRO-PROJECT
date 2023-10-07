@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="FrameSearch" width="250" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="250" screenid="Desktop_screen">
+        <Static id="Static00" taborder="0" text="Search Filters" left="7.20%" top="19" width="52.00%" height="60" font="bold 20px/normal &quot;Malgun Gothic&quot;"/>
+        <Static id="Static01" taborder="1" text="Search your race using the fields below" left="7.20%" top="59" width="63.60%" height="45" onclick="Div00_Static01_onclick" tooltiptype="default" verticalAlign="middle" wordWrap="english"/>
+        <Static id="Static02" taborder="2" text="Name:" left="7.20%" top="137" width="47.60%" height="20" font="16px/normal &quot;Malgun Gothic&quot;"/>
+        <Edit id="edt_Name" taborder="3" left="7.20%" top="173" width="84.80%" height="30" borderRadius="7px" displaynulltext="name" tooltiptext="Enter name of race competion" onchanged="div_Left_edt_Name_onchanged"/>
+        <Static id="Static02_01" taborder="4" text="Location:" left="8.00%" top="254" width="47.60%" height="20" font="16px/normal &quot;Malgun Gothic&quot;"/>
+        <Edit id="edt_Location" taborder="5" left="8.00%" top="284" width="84.80%" height="30" borderRadius="7px" displaynulltext="location"/>
+        <Static id="Static02_01_00" taborder="6" text="Date:" left="7.20%" top="354" width="47.60%" height="20" font="16px/normal &quot;Malgun Gothic&quot;"/>
+        <Edit id="edt_DateFrom" taborder="7" left="7.20%" top="384" width="36.80%" height="30" borderRadius="7px" text="" hotkey="" displaynulltext="form" tooltiptext="Enter the date start" inputmode="normal" inputtype="normal,digit,sign" inputfilter="none,space"/>
+        <Edit id="edt_DateTo" taborder="8" top="385" width="40.00%" height="30" borderRadius="7px" tooltiptext="Enter the day end" displaynulltext="to" right="8.00%"/>
+        <Static id="Static02_01_00_00" taborder="9" text="Category:" left="7.20%" top="464" width="47.60%" height="20" font="16px/normal &quot;Malgun Gothic&quot;"/>
+        <Combo id="cmb_CateGory" taborder="10" text="Combo00" left="7.20%" top="499" width="84.80%" height="30" borderRadius="7px" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">RUNNING</Col>
+                <Col id="datacolumn">running</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WALK</Col>
+                <Col id="datacolumn">walk</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Button id="btn_Search" taborder="11" text="Search" left="18.00%" top="589" width="63.20%" height="35" background="green" color="#8e8e8e" borderRadius="20px" onclick="div_Left_btn_Search_onclick"/>
+      </Layout>
+      <Layout height="720" mobileorientation="Landscape" name="Layout0" type="default" width="250"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[const NAME= "NAME"
+const LOCATION= "LOCATION"
+const CATEGORY= "CATEGORY"
+const DISTANCE= "DISTANCE"
+const DATE= "DATE"
+const IMAGE= "IMAGE"
+const PAGESIZE= 7
+const NEXT_PAGE= "next"
+const PREVIOUS_PAGE= "pre"
+const MINIMUM_PAGE_MESSAGE= "this is minimun page"
+const MAXIMUM_PAGE_MESSAGE= "this is maximun page"
+const NUM_PAGE_MAX= 7
+class DateBetween{
+	constructor(dateFrom, dateTo){
+		this.dateFrom= dateFrom ;
+		this.dateTo= dateTo;
+	}
+	 toString(){
+		return "[ dateFrom = " + this.dateFrom + ", dateTo = " + this.dateTo + "]";
+	}
+}
+class Input{
+	constructor(name, DateBetween, location, category){
+		/*check= function(val){
+			if (input.name !== "" && input.name !== undefined)
+				return false
+			return true
+		}*/
+		this.name= name;
+		this.DateBetween= DateBetween;
+		this.location= location;
+		this.category= category;
+	}
+	 toString(){
+		return "[ name = " + this.name + ", DateBetween = " ;
+		+ this.date.toString() + ", location = " ;
+		+ this.location + ", category = " + this.category  + "]" ;
+	}
+}
+this.getInput= function ()
+{
+	var name = this.edt_Name.value;
+    var dateFrom = this.edt_DateFrom.value;
+    var dateTo = this.edt_DateTo.value;
+	
+    var location = this.edt_Location.value;
+    var category = this.cmb_CateGory.text;
+//trace("check name: "+name)
+	return new Input(name, new DateBetween(dateFrom, dateTo), location, category);
+};
+this.div_Left_btn_Search_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var input = this.getInput()
+	nexacro.getApplication().mainframe.VFrameSet00.HFrameSet00.frc_Information.form.SearchHandler(input)
+	//this.mainframe.all['VFrameSet00'].all['HFrameSet00'].all['frc_Information'].SearchHandler(input)
+	//trace("trace log: "+nexacro.Application.mainframe.all['frc_Information'])
+	//nexacro.Application.mainframe.all['frc_Information'].MyFunction()
+	//nexacro.Application.mainframe.all['VFrameSet00'].all['HFrameSet00'].all['frc_Information'].MyFunction()
+};
+]]></Script>
+  </Form>
+</FDL>

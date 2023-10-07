@@ -1,0 +1,701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="FrameInformation" width="1030" height="720" titletext="New Form" onload="FrameInformation_onload">
+    <Layouts>
+      <Layout height="720" width="1030">
+        <Static id="Static00" taborder="0" text="Search Result" left="3.01%" top="19" width="15.44%" height="60" font="bold 20px/normal &quot;Malgun Gothic&quot;"/>
+        <Grid id="grd_ShowData" taborder="1" top="86" width="95.53%" height="68.61%" binddataset="ds_NewData" fillareatype="none" autofittype="col" oncellclick="div_Right_grd_ShowData_oncellclick" onheadclick="div_Right_grd_ShowData_onheadclick" border="0px none" left="25">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="30"/>
+                <Column size="100"/>
+                <Column size="60"/>
+                <Column size="40"/>
+                <Column size="40"/>
+                <Column size="60"/>
+              </Columns>
+              <Rows>
+                <Row size="41" band="head"/>
+                <Row size="85"/>
+              </Rows>
+              <Band id="head">
+                <Cell colspan="2" text="Name" border="1px none #cacaca, 1px none #cacaca, 4px solid black" textAlign="left" font="bold 18px/normal &quot;Malgun Gothic&quot;"/>
+                <Cell col="2" text="Location" border="1px none #cacaca, 1px none #cacaca, 4px solid black" textAlign="left" font="bold 18px/normal &quot;Malgun Gothic&quot;"/>
+                <Cell col="3" text="Category" border="1px none #cacaca, 1px none #cacaca, 4px solid black" textAlign="left" font="bold 18px/normal &quot;Malgun Gothic&quot;"/>
+                <Cell col="4" text="Distance" border="1px none #cacaca, 1px none #cacaca, 4px solid black" textAlign="left" font="bold 18px/normal &quot;Malgun Gothic&quot;"/>
+                <Cell col="5" text="Date" border="1px none #cacaca, 1px none #cacaca, 4px solid black" textAlign="left" displaytype="normal" font="bold 18px/normal &quot;Malgun Gothic&quot;"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:IMAGE" displaytype="imagecontrol" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left" imagestretch="fixaspectratio" borderRadius="50%"/>
+                <Cell col="1" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left" edittype="tree" displaytype="normal" treelevel="bind:LEVEL" text="bind:NAME" background="expr:&quot;#000000&quot;" locale="aa_DJ" cssclass="expr:LEVEL==3?&quot;red_White&quot;:LEVEL==4?&quot;red_White&quot;:&quot;&quot;"/>
+                <Cell col="2" text="bind:LOCATION" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left"/>
+                <Cell col="3" text="bind:CATEGORY" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left"/>
+                <Cell col="4" text="bind:DISTANCE" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left"/>
+                <Cell col="5" text="bind:DATE" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left" displaytype="date"/>
+              </Band>
+            </Format>
+            <Format id="format00"/>
+          </Formats>
+        </Grid>
+        <Div id="Div00" taborder="2" text="Div00" left="4.08%" width="90.10%" height="9.44%" top="82.78%">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="Previous" left="5.84%" top="22.06%" width="7.87%" height="51.47%" onclick="div_Right_Div00_Button00_onclick"/>
+              <Button id="Button00_00" taborder="1" text="Next" top="15" width="73" height="35" onclick="div_Right_Div00_Button00_00_onclick" right="11.09%"/>
+              <Static id="stc_PageCurrent" taborder="2" text="1" top="6" width="30" height="48" font="bold 20px/normal &quot;Malgun Gothic&quot;" left="37.75%"/>
+              <Static id="stc_PageMax" taborder="3" text="max" top="6" width="45" height="48" font="bold 20px/normal &quot;Malgun Gothic&quot;" right="42.8%"/>
+              <Static id="stc_PageCurrent00_00" taborder="4" text="/" top="0" width="17" height="56" font="bold 20px/normal &quot;Malgun Gothic&quot;" right="53.11%"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div01" taborder="3" text="Div01" left="10.68%" top="90.28%" width="73.79%" height="6.25%" border="1px solid black">
+          <Layouts>
+            <Layout/>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <DataObject id="DataObject00"/>
+      <Dataset id="ds_NewData">
+        <ColumnInfo>
+          <Column id="IMAGE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+          <Column id="LOCATION" type="STRING" size="256"/>
+          <Column id="CATEGORY" type="STRING" size="256"/>
+          <Column id="DISTANCE" type="STRING" size="256"/>
+          <Column id="DATE" type="STRING" size="256"/>
+          <Column id="LEVEL" type="INT" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="NAME">Color Me Rad Chicago</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2014/06/12</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">1</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Step up for Kids</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/25</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Hot Chocolate 15K</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Chicago Marathon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2014/06/12</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/21</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">5</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Monster Dash Half Marathon</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Running</Col>
+            <Col id="DATE">2016/04/10</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">7</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/12/27</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">11</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2015/04/15</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">9</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">The Ditka Dash</Col>
+            <Col id="LOCATION">Soldier Field, Chicago IL</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2014/04/17</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Color Me Rad Chicago</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2014/06/12</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Step up for Kids</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/25</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Hot Chocolate 15K</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">12</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Chicago Marathon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2014/06/12</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/21</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Monster Dash Half Marathon</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Running</Col>
+            <Col id="DATE">2016/04/10</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">7</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/12/27</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2015/04/15</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2015/04/15</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">9</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Color Me Rad Chicago</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2014/06/12</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Step up for Kids</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/25</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2015/04/15</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">The Ditka Dash</Col>
+            <Col id="LOCATION">Soldier Field, Chicago IL</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2014/04/17</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">20</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/21</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Monster Dash Half Marathon</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Running</Col>
+            <Col id="DATE">2016/04/10</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">7</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/12/27</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/21</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Soldier Field, Chicago IL</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Hot Chocolate 15K</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">12</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Chicago Marathon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2014/06/12</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/21</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Monster Dash Half Marathon</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Running</Col>
+            <Col id="DATE">2016/04/10</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">7</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/12/27</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[//declare cosnt variable
+const NAME= "NAME"
+const LOCATION= "LOCATION"
+const CATEGORY= "CATEGORY"
+const DISTANCE= "DISTANCE"
+const DATE= "DATE"
+const IMAGE= "IMAGE"
+const NEXT_PAGE= "next"
+const PREVIOUS_PAGE= "pre"
+const MINIMUM_PAGE_MESSAGE= "this is minimun page"
+const MAXIMUM_PAGE_MESSAGE= "this is maximun page"
+const NUM_PAGE_MAX= 6
+//declare variable
+var strSearchGlobal= ""
+var numButton= 0
+//declare Class
+class DateBetween{
+	constructor(dateFrom, dateTo){
+		this.dateFrom= dateFrom ;
+		this.dateTo= dateTo;
+	}
+	 toString(){
+		return "[ dateFrom = " + this.dateFrom + ", dateTo = " + this.dateTo + "]";
+	}
+}
+class Input{
+	constructor(name, DateBetween, location, category){
+		/*check= function(val){
+			if (input.name !== "" && input.name !== undefined)
+				return false
+			return true
+		}*/
+		this.name= name;
+		this.DateBetween= DateBetween;
+		this.location= location;
+		this.category= category;
+	}
+	 toString(){
+		return "[ name = " + this.name + ", DateBetween = " ;
+		+ this.date.toString() + ", location = " ;
+		+ this.location + ", category = " + this.category  + "]" ;
+	}
+}
+class PagingInfor{
+	constructor(PageMax, PageIndex){
+		this.PageMax= PageMax
+		this.PageIndex= PageIndex
+	}
+}
+
+/*######################## MY FUCNTION #########################*/
+/*------------------------ PAGING ------------------------*/
+// init page in first time
+this.InitPagingFunction= function ()
+{
+	this.ds_NewData.filter(strSearchGlobal)
+	// define max page 
+	var rowNF= this.ds_NewData.getRowCount()
+	trace("rowNF: "+ rowNF)
+	//Math.ceil(rowNF/NUM_PAGE_MAX)
+	//this.div_Right.form.Div00.form.stc_PageMax.text= "123"
+	this.Div00.form.stc_PageMax.set_text(Math.ceil(rowNF/NUM_PAGE_MAX))
+	this.Div00.form.stc_PageCurrent.set_text(1)
+	this.AddPagingBar(Math.ceil(rowNF/NUM_PAGE_MAX))
+// filter first page	
+	for(let i= 0; i < rowNF-NUM_PAGE_MAX; i++){
+		trace("Pagemax: " + i)
+		this.ds_NewData.filterRow(NUM_PAGE_MAX)
+	}
+	
+///test
+	var rowNF= this.ds_NewData.getRowCountNF()
+	
+	trace("div: "+ Math.ceil(rowNF/NUM_PAGE_MAX))
+	trace("real: " + this.ds_NewData.getRowCountNF())
+	trace("count: "+ this.ds_NewData.getCount())
+	trace("page max: " + this.ds_NewData.rowcount)
+};
+this.pagingHandler= function (index)
+{
+	// visible all
+	this.ds_NewData.filter(strSearchGlobal)
+	//init value
+	var rowNF= this.ds_NewData.getRowCount()
+	var pageMax= Math.ceil(rowNF/NUM_PAGE_MAX)
+	//check appropriate
+	if ( index < 1){	
+ 		alert(MINIMUM_PAGE_MESSAGE)
+   		index= 1
+   	}
+	if ( index > pageMax){	
+ 		alert(MAXIMUM_PAGE_MESSAGE)
+   		index= pageMax
+   	}
+
+	this.Div00.form.stc_PageCurrent.set_text(index)
+	this.Div00.form.stc_PageMax.set_text(pageMax)
+	trace("page max: " + this.ds_NewData.rowcount)
+// Filter
+	
+	// filter before
+	for(let i= 0; i < NUM_PAGE_MAX*(index-1); i++){
+		trace("Pagemax: " + i)
+		this.ds_NewData.filterRow(0)
+	}
+	// filter after
+	for(let i= 0; i < rowNF- NUM_PAGE_MAX*(index); i++){
+		trace("Pagemax: " + i)
+		this.ds_NewData.filterRow(NUM_PAGE_MAX)
+	}
+///test check log
+	var rowNF= this.ds_NewData.getRowCountNF()
+	
+	trace("div: "+ Math.ceil(rowNF/NUM_PAGE_MAX))
+	trace("real: " + this.ds_NewData.getRowCountNF())
+	trace("count: "+ this.ds_NewData.getCount())
+	trace("page max: " + this.ds_NewData.rowcount)
+};
+// previous
+this.div_Right_Div00_Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var pagecurrent= parseInt(this.Div00.form.stc_PageCurrent.text)
+	this.pagingHandler(pagecurrent-1)
+};
+//next
+this.div_Right_Div00_Button00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var pagecurrent= parseInt(this.Div00.form.stc_PageCurrent.text)
+	this.pagingHandler(pagecurrent+1)
+};
+
+/*------------------------ PAGING BAR ------------------------*/
+//create button
+this.AddButton= function(i, max){
+	var mainDiv= this.Div01
+	var objButton = new Button(); 
+	//int size position
+	buttonWitdh= (Math.floor(100/max))
+	buttonLeft= (parseInt(i)-1)* buttonWitdh
+	objButton.init("Button" + i, buttonLeft +"%", 0, buttonWitdh +"%", "100%", null, null);
+
+	//objButton.init("Button", null, null, 300, "400px", "80%", 300);
+
+	// Add Object to Parent Form  
+	mainDiv.addChild("Button" +i, objButton); 
+	objButton.set_text(i)
+	objButton.set_border("1px solid black")
+	this.usePagingHandler= function ()
+	{
+		this.pagingHandler(i)
+	};
+	objButton.addEventHandler("onclick", this.usePagingHandler, this);
+	// Insert Object to Parent Form  
+	mainDiv.insertChild(1, "Button", objButton); 
+	// Show Object  
+	objButton.show(); 
+}
+this.AddPagingBar= function (num)
+{
+	var mainDiv= this.Div01
+	for(let i= 1; i<= numButton; i++){
+		 mainDiv.removeChild("Button" + i)
+	}
+	for( let i= 1; i<= num; i++){
+		this.AddButton(i,num)
+	}
+	numButton= num
+};
+/*------------------------ SEARCH HANDLER ------------------------*/
+this.SearchHandler= function (input)
+{
+	var strSearch =""
+	//NAME
+	if (input.name !== undefined && input.name !== "" ){
+		if(strSearch.length > 0) strSearch += " && "
+			strSearch += "String("+NAME+").toLowerCase().trim().indexOf('"+input.name.toLowerCase().trim()+"')>=0";
+	}
+	//LOCATION
+	if ( input.location !== undefined && input.location !== "" ){
+		if(strSearch.length > 0) strSearch += " && "
+		strSearch += "String("+LOCATION+").toLowerCase().indexOf('"+input.location.toLowerCase().trim()+"')>=0";
+	}
+	//CATEGORY
+	if (input.category !== undefined && input.category !== ""  ){
+		if(strSearch.length > 0) strSearch += " && "
+		strSearch += "String("+CATEGORY+").toLowerCase().indexOf('"+input.category+"')>=0";
+	}
+	//DATE
+	//2015-01-20
+	var dateFrom=input.DateBetween.dateFrom
+	var dateTo=input.DateBetween.dateTo
+	trace("dateFrom: "+ dateFrom + " check: "+("2015-01-20">=dateFrom))
+	trace("dateTo: "+ dateTo + " check: "+("2015-01-20"<=dateTo))
+	if ( (dateFrom !== undefined && dateFrom !== "") && (dateTo !== undefined && dateTo !== "") ){
+		if(strSearch.length > 0) strSearch += " && "
+		strSearch += DATE+" >= '"+dateFrom +"' && "+ DATE+" <= '"+dateTo+"'";
+	}
+	//action search
+	strSearchGlobal= strSearch
+	this.InitPagingFunction()
+};
+
+/*######################## EVENT FUCNTION #########################*/
+this.FrameInformation_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.InitPagingFunction()
+};
+
+this.div_Right_grd_ShowData_onheadclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	 //trace("check objDs: "+objDs.getCellText(-1, 0))
+	/*for(let i= 0; i< this.ds_NewData.getRowCount();  i++){
+		for(let j= i; j< this.ds_NewData.getRowCount();  j++){
+			var row= this.ds_NewData.get
+		}
+	}*/
+	var objDs = this.objects[obj.binddataset];   
+	for (var i = 0; i < obj.getCellCount("head"); i++)
+	{ 
+		var sHeadText = obj.getCellText(-1, i);
+		var nLen      = sHeadText.length - 1;  
+		var S={
+			SORT: "",
+			SORT_DATE:"DATE",
+			SORT_IMAGE: "IMAGE",
+			SORT_NAME: "NAME"
+		   }
+	    var sColId = (obj.getCellProperty("body", e.col,"text")).toString().split(":");
+	    trace("check here: "+(sColId[1]== S.SORT_IMAGE))
+	    if(sColId[1]=== S.SORT_IMAGE)
+		S.SORT= S.SORT_NAME
+		else S.SORT= sColId[1]
+		
+		if(!((S.SORT==S.SORT_NAME) || (S.SORT==S.SORT_DATE) ))  
+			return;
+		if (i == e.cell )
+		  {
+			   if (sHeadText.substr(nLen) == "▲") 
+			   {
+				obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen)+ "▼");
+				objDs.set_keystring("S:-" + S.SORT);
+			   }
+			   else if (sHeadText.substr(nLen) == "▼") 
+			   {
+				obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen)+ "▲");
+				objDs.set_keystring("S:+" + S.SORT);
+			   }
+			   else 
+			   {
+				obj.setCellProperty( "head", i, "text", sHeadText+"▲");
+				objDs.set_keystring("S:+" + S.SORT);
+			   }
+		  }
+		  else
+		  {
+		   if (sHeadText.substr(nLen) == "▲" || sHeadText.substr(nLen) == "▼") 
+		   {
+			obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen));
+		   }
+		  }
+	 } 
+};
+
+this.Div00_Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+		// Create Object  
+		var mainDiv= this.Div00
+	var objButton = new Button();  
+	objButton.init("Button", 210, 10, 85, 80, null, null);
+	//objButton.init("Button", null, null, 300, "400px", "80%", 300);
+
+	// Add Object to Parent Form  
+	mainDiv.addChild("Button", objButton); 
+	objButton.set_text("clicked me")
+	// Insert Object to Parent Form  
+	mainDiv.insertChild(1, "Button", objButton); 
+	 
+
+	// Show Object  
+	objButton.show(); 
+};
+
+]]></Script>
+  </Form>
+</FDL>

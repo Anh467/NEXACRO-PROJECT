@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script version="1.0" type="xscript5.1"><![CDATA[this.fn_loadData= function(){
+	//var ds_Track_Working=  nexacro.getApplication().ds_Track_Working
+	var id= "LOAD DATA";
+	var url= "http://localhost:8888";
+	var reqDs= "";
+	var resDs= "ds_Temp=IDDataset";
+	var args= "";
+	var callback= "fn_callback";
+	this.transaction(id, url, reqDs, resDs, args, callback);
+};
+this.fn_callback= function(serviceID, errCD, msg){
+	var ds_Track_Working=  nexacro.getApplication().ds_Track_Working
+	ds_Track_Working.copyData(this.ds_Temp)
+	if(errCD < 0){
+		trace("err " + errCD + serviceID + ": "+ msg)
+		trace("records: "+ ds_Track_Working.getCount())
+	}
+	else{
+		trace("succ " + errCD+ serviceID + ": "+ msg)
+		trace("records: "+  ds_Track_Working.getCount())
+	}
+}]]></Script>

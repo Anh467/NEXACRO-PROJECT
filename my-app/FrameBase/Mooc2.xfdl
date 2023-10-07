@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Mooc2" width="1280" height="720" titletext="New Form" onload="Mooc2_onload">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Div id="div_top" taborder="0" text="Div00" left="0" top="0" width="100.00%" height="82" border="2px none black, 2px none black, 2px solid black">
+          <Layouts>
+            <Layout>
+              <ImageViewer id="imv_Logo" taborder="0" left="1.80%" top="13" width="54" height="57" image="url('imagerc::Compass.png')" stretch="fit" border="0px none" borderRadius="100px"/>
+              <Static id="stc_FindRace" taborder="1" text="Find Races" left="7.97%" top="10" width="258" height="60" font="bold 48px/normal &quot;Malgun Gothic&quot;"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="div_Left" taborder="1" left="0%" width="15.55%" height="88.61%" text="" border="0px none, 2px solid dimgray, 0px none, 0px none" bottom="0%">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Search Filters" left="9.14%" top="19" width="65.98%" height="60" font="bold 20px/normal &quot;Malgun Gothic&quot;"/>
+              <Static id="Static01" taborder="1" text="Search your race using the fields below" left="9.14%" top="59" width="81.2%" height="45" onclick="Div00_Static01_onclick" tooltiptype="default" verticalAlign="middle" wordWrap="english"/>
+              <Static id="Static02" taborder="2" text="Name:" left="9.14%" top="113" width="60.9%" height="20" font="16px/normal &quot;Malgun Gothic&quot;"/>
+              <Edit id="edt_Name" taborder="3" left="9.14%" top="149" width="81.2%" height="30" borderRadius="7px" displaynulltext="name" tooltiptext="Enter name of race competion"/>
+              <Static id="Static02_01" taborder="4" text="Location:" left="9.14%" top="204" width="60.9%" height="20" font="16px/normal &quot;Malgun Gothic&quot;"/>
+              <Edit id="edt_Location" taborder="5" left="9.14%" top="234" width="81.2%" height="30" borderRadius="7px" displaynulltext="location"/>
+              <Static id="Static02_01_00" taborder="6" text="Date:" left="9.14%" top="294" width="60.9%" height="20" font="16px/normal &quot;Malgun Gothic&quot;"/>
+              <Edit id="edt_DateFrom" taborder="7" left="9.14%" top="324" width="35.53%" height="30" borderRadius="7px" text="" hotkey="" displaynulltext="form" tooltiptext="Enter the date start"/>
+              <Static id="Static02_01_00_00" taborder="8" text="Category:" left="9.14%" top="384" width="60.9%" height="20" font="16px/normal &quot;Malgun Gothic&quot;"/>
+              <Edit id="edt_DateTo" taborder="9" top="324" width="35.53%" height="30" borderRadius="7px" tooltiptext="Enter the day end" displaynulltext="to" right="12.18%"/>
+              <Combo id="cmb_CateGory" taborder="10" text="Combo00" left="9.14%" top="419" width="81.2%" height="30" borderRadius="7px" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">RUNNING</Col>
+                      <Col id="datacolumn">running</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">WALK</Col>
+                      <Col id="datacolumn">walk</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Combo>
+              <Button id="btn_Search" taborder="11" text="Search" left="7.61%" top="488" width="80.19%" height="35" background="green" color="#8e8e8e" borderRadius="20px" onclick="div_Left_btn_Search_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="div_Right" taborder="2" text="Div01" width="84.69%" height="88.75%" right="0%" bottom="0%">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Search Result" left="2.86%" top="19" width="11.90%" height="60" font="bold 20px/normal &quot;Malgun Gothic&quot;"/>
+              <Grid id="grd_ShowData" taborder="1" top="68" width="95.02%" height="75.59%" binddataset="ds_NewData" fillareatype="none" autofittype="col" oncellclick="div_Right_grd_ShowData_oncellclick" onheadclick="div_Right_grd_ShowData_onheadclick" border="0px none" left="25">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="30"/>
+                      <Column size="100"/>
+                      <Column size="60"/>
+                      <Column size="40"/>
+                      <Column size="40"/>
+                      <Column size="60"/>
+                      <Column size="20"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="41" band="head"/>
+                      <Row size="85"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell colspan="2" text="Name" border="1px none #cacaca, 1px none #cacaca, 4px solid black" textAlign="left" font="bold 18px/normal &quot;Malgun Gothic&quot;"/>
+                      <Cell col="2" text="Location" border="1px none #cacaca, 1px none #cacaca, 4px solid black" textAlign="left" font="bold 18px/normal &quot;Malgun Gothic&quot;"/>
+                      <Cell col="3" text="Category" border="1px none #cacaca, 1px none #cacaca, 4px solid black" textAlign="left" font="bold 18px/normal &quot;Malgun Gothic&quot;"/>
+                      <Cell col="4" text="Distance" border="1px none #cacaca, 1px none #cacaca, 4px solid black" textAlign="left" font="bold 18px/normal &quot;Malgun Gothic&quot;"/>
+                      <Cell col="5" text="Date" border="1px none #cacaca, 1px none #cacaca, 4px solid black" textAlign="left" displaytype="normal" font="bold 18px/normal &quot;Malgun Gothic&quot;"/>
+                      <Cell col="6" text="Level" border="1px none #cacaca, 1px none #cacaca, 4px solid black" font="bold 18px/normal &quot;Malgun Gothic&quot;" textAlign="left"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:IMAGE" displaytype="imagecontrol" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left" imagestretch="fixaspectratio"/>
+                      <Cell col="1" text="bind:NAME" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left"/>
+                      <Cell col="2" text="bind:LOCATION" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left"/>
+                      <Cell col="3" text="bind:CATEGORY" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left"/>
+                      <Cell col="4" text="bind:DISTANCE" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left"/>
+                      <Cell col="5" text="bind:DATE" border="1px none #dbdee2, 1px none #dbdee2, 1px solid #dbdee2" textAlign="left" displaytype="date"/>
+                      <Cell col="6" text="bind:LEVEL"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Div id="Div00" taborder="2" text="Div00" left="26.29%" width="514" height="64" bottom="4.69%">
+                <Layouts>
+                  <Layout>
+                    <Button id="Button00" taborder="0" text="Previous" left="5.84%" top="15" width="73" height="35" onclick="div_Right_Div00_Button00_onclick"/>
+                    <Button id="Button00_00" taborder="1" text="Next" top="15" width="73" height="35" onclick="div_Right_Div00_Button00_00_onclick" right="11.09%"/>
+                    <Static id="stc_PageCurrent" taborder="2" text="1" top="6" width="30" height="48" font="bold 20px/normal &quot;Malgun Gothic&quot;" left="194"/>
+                    <Static id="stc_PageMax" taborder="3" text="max" top="6" width="45" height="48" font="bold 20px/normal &quot;Malgun Gothic&quot;" right="42.8%"/>
+                    <Static id="stc_PageCurrent00_00" taborder="4" text="/" top="0" width="17" height="56" font="bold 20px/normal &quot;Malgun Gothic&quot;" right="53.11%"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <DataObject id="DataObject00" preload="true">
+        <Contents><![CDATA[[
+	{
+		"name" : "Color me rad chicago",
+		"location" : "Chicago",
+		"category" : "Running",
+		"distance" : "5k",
+		"date" : "06/12/2014"
+	},
+	{
+		"name" : "Color me rad chicago1",
+		"location" : "Chicago1",
+		"category" : "Running1",
+		"distance" : "5k1",
+		"date" : "06/12/2015"
+	}
+]]]></Contents>
+      </DataObject>
+      <Dataset id="ds_Data">
+        <ColumnInfo>
+          <Column id="NAME" type="STRING" size="256"/>
+          <Column id="LOCATION" type="STRING" size="256"/>
+          <Column id="CATEGORY" type="STRING" size="256"/>
+          <Column id="DISTANCE" type="STRING" size="256"/>
+          <Column id="DATE" type="STRING" size="256"/>
+          <Column id="IMAGE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="NAME">Chicago</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">06/12/2014</Col>
+            <Col id="IMAGE">theme://images/btn_expand.png</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Kids</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">25/01/2015</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Chocolate</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">09/10/2014</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/1600w-c3Jw1yOiXJw.png</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Chicago</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">06/12/2014</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Kids</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">25/01/2015</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Chocolate</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">09/10/2014</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_NewData">
+        <ColumnInfo>
+          <Column id="IMAGE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+          <Column id="LOCATION" type="STRING" size="256"/>
+          <Column id="CATEGORY" type="STRING" size="256"/>
+          <Column id="DISTANCE" type="STRING" size="256"/>
+          <Column id="DATE" type="DATE" size="256"/>
+          <Column id="LEVEL" type="INT" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="NAME">Color Me Rad Chicago</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2014/06/12</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">1</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Step up for Kids</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/25</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">2</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Hot Chocolate 15K</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">3</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Chicago Marathon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2014/06/12</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">4</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/21</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">5</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">6</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Monster Dash Half Marathon</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Running</Col>
+            <Col id="DATE">2016/04/10</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">7</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/12/27</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">8</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2015/04/15</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">9</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">The Ditka Dash</Col>
+            <Col id="LOCATION">Soldier Field, Chicago IL</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2014/04/17</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">10</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Color Me Rad Chicago</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2014/06/12</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">11</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Step up for Kids</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/25</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">12</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Hot Chocolate 15K</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">13</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Chicago Marathon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2014/06/12</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">14</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="LOCATION">Chicago, IL USA</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2015/01/21</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">15</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Race Judicata</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/09/10</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="IMAGE">imagerc::Logo/1_dell-logo.png</Col>
+            <Col id="LEVEL">16</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Monster Dash Half Marathon</Col>
+            <Col id="LOCATION">Chicago, IL</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">Running</Col>
+            <Col id="DATE">2016/04/10</Col>
+            <Col id="IMAGE">imagerc::Logo/Dang-ky-logo-thuong-hieu-doc-quyen-o-dau-quy-dinh-moi-1.png</Col>
+            <Col id="LEVEL">17</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">15k</Col>
+            <Col id="DATE">2014/12/27</Col>
+            <Col id="IMAGE">imagerc::Logo/DB2019AL01950_web_1600.jpg</Col>
+            <Col id="LEVEL">18</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">Urbanathalon</Col>
+            <Col id="LOCATION">Chicago, II</Col>
+            <Col id="CATEGORY">Running</Col>
+            <Col id="DISTANCE">5k</Col>
+            <Col id="DATE">2015/04/15</Col>
+            <Col id="IMAGE">imagerc::Logo/logo_lagi_8_resize.png</Col>
+            <Col id="LEVEL">19</Col>
+          </Row>
+          <Row>
+            <Col id="NAME">The Ditka Dash</Col>
+            <Col id="LOCATION">Soldier Field, Chicago IL</Col>
+            <Col id="CATEGORY">walk</Col>
+            <Col id="DISTANCE">Other</Col>
+            <Col id="DATE">2014/04/17</Col>
+            <Col id="IMAGE">imagerc::Logo/Logo_of_Twitter.svg.png</Col>
+            <Col id="LEVEL">20</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[const NAME= "NAME"
+const LOCATION= "LOCATION"
+const CATEGORY= "CATEGORY"
+const DISTANCE= "DISTANCE"
+const DATE= "DATE"
+const IMAGE= "IMAGE"
+const PAGESIZE= 7
+class DateBetween{
+	constructor(dateFrom, dateTo){
+		this.dateFrom= dateFrom ;
+		this.dateTo= dateTo;
+	}
+	 toString(){
+		return "[ dateFrom = " + this.dateFrom + ", dateTo = " + this.dateTo + "]";
+	}
+}
+class Input{
+	constructor(name, DateBetween, location, category){
+		/*check= function(val){
+			if (input.name !== "" && input.name !== undefined)
+				return false
+			return true
+		}*/
+		this.name= name;
+		this.DateBetween= DateBetween;
+		this.location= location;
+		this.category= category;
+	}
+	 toString(){
+		return "[ name = " + this.name + ", DateBetween = " ;
+		+ this.date.toString() + ", location = " ;
+		+ this.location + ", category = " + this.category  + "]" ;
+	}
+}
+class PagingInfor{
+	constructor(PageMax, PageIndex){
+		this.PageMax= PageMax
+		this.PageIndex= PageIndex
+	}
+}
+/*this.GetInput=function(){
+    var name = this.div_Left.form.edt_Name.value;
+    var dateFrom = this.div_Left.form.edt_DateFrom.value;
+    var dateTo = this.div_Left.form.edt_DateTo.value;
+    var location = this.div_Left.form.edt_Location.value;
+    var category = this.div_Left.form.cmb_CateGory.text;
+    var input = new Input(name, new DateBetween(dateFrom, dateTo), location, category);
+    return input;
+}*/
+testTrace= function (nameT)
+{
+	var name = nameT
+	trace(name)
+	return name
+};
+
+this.div_Left_Button00_onclick = function(obj, e) {
+    /*
+	// đang bị lỗi không thể gọi hàm GetInput()
+	var input = GetInput(); 
+    this.alert(input.toString());*/
+	var name = this.div_Left.form.edt_Name.value;
+    var dateFrom = this.div_Left.form.edt_DateFrom.value;
+    var dateTo = this.div_Left.form.edt_DateTo.value;
+    var location = this.div_Left.form.edt_Location.value;
+    var category = this.div_Left.form.cmb_CateGory.text;
+    //var input = new Input(name, new DateBetween(dateFrom, dateTo), location, category);
+	//this.alert("data: "+GetMyInput().location)
+};
+
+
+this.div_Left_btn_Search_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+	var name = this.div_Left.form.edt_Name.value;
+    var dateFrom = this.div_Left.form.edt_DateFrom.value;
+    var dateTo = this.div_Left.form.edt_DateTo.value;
+	
+    var location = this.div_Left.form.edt_Location.value;
+    var category = this.div_Left.form.cmb_CateGory.text;
+    var input = new Input(name, new DateBetween(dateFrom, dateTo), location, category);
+	//test
+	
+	
+	//
+	var strSearch =""
+	//NAME
+	if (input.name !== "" && input.name !== undefined){
+		if(strSearch.length > 0) strSearch += " && "
+			strSearch += "String("+NAME+").toLowerCase().trim().indexOf('"+input.name.toLowerCase().trim()+"')>=0";
+	}
+	//LOCATION
+	if (input.location !== "" && input.location !== undefined){
+		if(strSearch.length > 0) strSearch += " && "
+		strSearch += "String("+LOCATION+").toLowerCase().indexOf('"+input.location.toLowerCase().trim()+"')>=0";
+	}
+	//CATEGORY
+	if (input.category !== "" && input.category !== undefined){
+		if(strSearch.length > 0) strSearch += " && "
+		strSearch += "String("+CATEGORY+").toLowerCase().indexOf('"+input.category+"')>=0";
+	}
+	//DATE
+	var date1 = new Date(dateFrom).getTime();
+	var date2 = new Date(dateTo).getTime();
+	var result= date1<date2;
+	var dateTest= '2014/06/12'
+	//2014/06/11
+	//2014/06/16
+	trace("log: "+ input.DateBetween.dateFrom)
+	trace("log: "+ input.DateBetween.dateTo)
+	trace("log: "+ (date1<=new Date(dateTest).getTime()))
+	trace("log: "+ (new Date(dateTest).getTime()<=date2))
+	trace("log: "+ ((input.DateBetween.dateFrom<=dateTest)&&(dateTest<=input.DateBetween.dateTo)))
+	if (input.DateBetween.dateFrom !== "" && input.DateBetween.dateTo !== undefined &&input.DateBetween.dateFrom !== "" && input.DateBetween.dateTo !== undefined){
+		if(strSearch.length > 0) strSearch += " && "
+		strSearch += "'" + dateFrom + "' <= String(DATE) && String(DATE) <= '" + dateTo + "'";
+	}
+	//trace("date: "+ input.DateBetween.DateTo)
+	//this.alert("aa")
+	
+		//trace("check"+input.category.toLowerCase().trim())
+	this.ds_NewData.filter(strSearch)
+};
+
+
+this.Mooc2_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	//this.div_Left.form.cmb_CateGory.innerdataset
+	var mySetCategory= new Set()
+	//trace("check: "+this.ds_NewData.getColumn(0, CATEGORY))
+	for(let i= 0; i<  this.div_Right.form.grd_ShowData.rowcount; i++){
+			if(i % 2 == 0){
+			this.div_Right.form.grd_ShowData.ge
+// 				for(let i= 0; i<  this.div_Right.form.grd_ShowData.getrow(); i++){
+// 					this.ds_N
+// 				}
+			}
+	}
+	for (const val of mySetCategory) {
+		var valUp= val.toUpperCase()
+		var valLow= val.toLowerCase()
+		//trace("check const: "+ valUp +" and " + valLow)
+		//this.div_Left.form.cmb_CateGory.innerdataset.appendItem(valUp, valLow)
+		//this.div_Left.form.cmb_CateGory.innerdataset.add_item()
+	}
+	
+// define max page 
+	var rowNF= this.ds_NewData.getRowCountNF()
+	trace("rowNF: "+ rowNF)
+	//Math.ceil(rowNF/PAGESIZE)
+	//this.div_Right.form.Div00.form.stc_PageMax.text= "123"
+	this.div_Right.form.Div00.form.stc_PageMax.set_text(Math.ceil(rowNF/PAGESIZE))
+// filter first page	
+	for(let i= 0; i < rowNF-PAGESIZE; i++){
+		trace("Pagemax: " + i)
+		this.ds_NewData.filterRow(7)
+	}
+///test
+	var rowNF= this.ds_NewData.getRowCountNF()
+	
+	trace("div: "+ Math.ceil(rowNF/PAGESIZE))
+	trace("real: " + this.ds_NewData.getRowCountNF())
+	trace("count: "+ this.ds_NewData.getCount())
+	trace("page max: " + this.ds_NewData.rowcount)
+};
+
+this.div_Right_grd_ShowData_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	
+};
+
+this.div_Right_grd_ShowData_onheadclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	 var objDs = this.objects[obj.binddataset];
+	 for (var i = 0; i < obj.getCellCount("head"); i++)
+	 { 
+		var sHeadText = obj.getCellText(-1, i);
+        var nLen      = sHeadText.length - 1;
+		trace(sHeadText.substr(nLen))
+	}
+	
+	 //trace("check objDs: "+objDs.getCellText(-1, 0))
+	/*for(let i= 0; i< this.ds_NewData.getRowCount();  i++){
+		for(let j= i; j< this.ds_NewData.getRowCount();  j++){
+			var row= this.ds_NewData.get
+		}
+	}*/
+	var objDs = this.objects[obj.binddataset];   
+	 for (var i = 0; i < obj.getCellCount("head"); i++)
+	 { 
+	  var sHeadText = obj.getCellText(-1, i);
+			var nLen      = sHeadText.length - 1;  
+	   
+	  if (i == e.cell)
+	  {
+	  if(i==0){
+			if (sHeadText.substr(nLen) == "▲") 
+		   {
+			obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen)+ "▼");
+			objDs.set_keystring("S:-" + "NAME");
+		   }
+		   else if (sHeadText.substr(nLen) == "▼") 
+		   {
+			obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen)+ "▲");
+			objDs.set_keystring("S:+" + "NAME");
+		   }
+		   else 
+		   {
+			obj.setCellProperty( "head", i, "text", sHeadText+"▲");
+			objDs.set_keystring("S:+" + "NAME");
+		   }
+	  }
+	  else{
+			var sColId = (obj.getCellProperty("body", e.col,"text")).toString().split(":");
+		   if (sHeadText.substr(nLen) == "▲") 
+		   {
+			obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen)+ "▼");
+			objDs.set_keystring("S:-" + sColId[1]);
+		   }
+		   else if (sHeadText.substr(nLen) == "▼") 
+		   {
+			obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen)+ "▲");
+			objDs.set_keystring("S:+" + sColId[1]);
+		   }
+		   else 
+		   {
+			obj.setCellProperty( "head", i, "text", sHeadText+"▲");
+			objDs.set_keystring("S:+" + sColId[1]);
+		   }
+	  }
+	   
+	  }
+	  else
+	  {
+	   if (sHeadText.substr(nLen) == "▲" || sHeadText.substr(nLen) == "▼") 
+	   {
+		obj.setCellProperty( "head", i, "text", sHeadText.substr(0, nLen));
+	   }
+	  }
+	 } 
+};
+
+this.div_Right_Div00_Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+//init variable
+	var pagecurrent= parseInt(this.div_Right.form.Div00.form.stc_PageCurrent.text)
+	var rowNF= this.ds_NewData.getRowCountNF()
+	var pageMax= Math.ceil(rowNF/PAGESIZE)
+//check appropriate
+ 	if (this.div_Right.form.Div00.form.stc_PageCurrent.text === '1'){
+ 		alert('this is minimun page')
+  		return
+  	}
+//change current page index
+	pagecurrent= pagecurrent-1
+	this.div_Right.form.Div00.form.stc_PageCurrent.set_text(pagecurrent)
+	trace("page max: " + this.ds_NewData.rowcount)
+// 	this.ds_NewData.filterRow(1)
+// 	this.ds_NewData.filterRow(2)
+
+// Filter
+	// visible all
+	this.ds_NewData.filter(true)
+	// filter before
+	for(let i= 0; i < PAGESIZE*(pagecurrent-1); i++){
+		trace("Pagemax: " + i)
+		this.ds_NewData.filterRow(0)
+	}
+	// filter after
+	for(let i= 0; i < rowNF- PAGESIZE*(pagecurrent); i++){
+		trace("Pagemax: " + i)
+		this.ds_NewData.filterRow(7)
+	}
+///test check log
+	var rowNF= this.ds_NewData.getRowCountNF()
+	
+	trace("div: "+ Math.ceil(rowNF/PAGESIZE))
+	trace("real: " + this.ds_NewData.getRowCountNF())
+	trace("count: "+ this.ds_NewData.getCount())
+	trace("page max: " + this.ds_NewData.rowcount)
+};
+
+this.div_Right_Div00_Button00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+//init variable
+	var pagecurrent= parseInt(this.div_Right.form.Div00.form.stc_PageCurrent.text)
+	var rowNF= this.ds_NewData.getRowCountNF()
+	var pageMax= Math.ceil(rowNF/PAGESIZE)
+//check appropriate
+	if (this.div_Right.form.Div00.form.stc_PageCurrent.text === ""+pageMax){
+		alert('this is maximun page')
+ 		return
+ 	}
+//change current page index
+	pagecurrent +=1
+	this.div_Right.form.Div00.form.stc_PageCurrent.set_text(pagecurrent)
+// Filter
+	// visible all
+	this.ds_NewData.filter(true)
+	// filter before
+	for(let i= 0; i < PAGESIZE*(pagecurrent-1); i++){
+		trace("Pagemax: " + i)
+		this.ds_NewData.filterRow(0)
+	}
+	// filter after
+	for(let i= 0; i < rowNF- PAGESIZE*(pagecurrent); i++){
+		trace("Pagemax: " + i)
+		this.ds_NewData.filterRow(7)
+	}
+///test check log
+	var rowNF= this.ds_NewData.getRowCountNF()
+	trace("div: "+ Math.ceil(rowNF/PAGESIZE))
+	trace("real: " + this.ds_NewData.getRowCountNF())
+	trace("count: "+ this.ds_NewData.getCount())
+	trace("page max: " + this.ds_NewData.rowcount)
+	//this.ds_NewData.filter(true)
+};
+]]></Script>
+  </Form>
+</FDL>

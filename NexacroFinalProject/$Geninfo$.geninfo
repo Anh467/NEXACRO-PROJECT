@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <GenInfo version="1.1">
+    <Rule>
+      <ENV rule_version="1.05"/>
+      <ADL rule_version="1.14"/>
+      <FDL rule_version="1.04"/>
+      <XCSS rule_version="1.04"/>
+      <Script rule_version="1.02"/>
+      <GeneratorInfo rule_version="1.3"/>
+    </Rule>
+    <Info project="D:\VietNA3\Nexacro\Project\NexacroFinalProject\" generated="C:\Users\vietna3\Documents\TOBESOFT\Nexacro N\outputs\NexacroFinalProject\"><File url="typedefinition.xml" checksum="20230918075533" errormsg=""/><File url="appvariables.xml" checksum="20230928140153" errormsg=""/><File url="environment.xml" checksum="20230928081018" errormsg=""/><File url="_resource_\_theme_\blue\theme.xcss" checksum="20230927094146" errormsg=""/><File url="Application_Desktop.xadl" checksum="20230922165617" errormsg=""/><File url="FrameBase\Form_Work.xfdl" checksum="20230918080119" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\framework\Framework.json" checksum="20230705113500" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\resources\Resource.json" checksum="20230705113500" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\component\CompBase.json" checksum="20230705113454" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\component\ComComp.json" checksum="20230705113452" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\component\Grid.json" checksum="20230705113454" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\component\ListView.json" checksum="20230705113500" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\21.0.0\nexacrolib\component\DeviceAPI.json" checksum="20230705113454" errormsg=""/><File url="FrameBase\Form_Information.xfdl" checksum="20230929182038" errormsg=""/><File url="FrameBase\Form_Search.xfdl" checksum="20230929152005" errormsg=""/><File url="FrameBase\Form_Update.xfdl" checksum="20230929133919" errormsg=""/><File url="FrameBase\Form_Add.xfdl" checksum="20230929132957" errormsg=""/><File url="FrameBase\Form_Left.xfdl" checksum="20230927130652" errormsg=""/><File url="FrameBase\Form_Update_Input.xfdl" checksum="20230919124321" errormsg=""/><File url="FrameBase\Form_Update_Search.xfdl" checksum="20230919124824" errormsg=""/><File url="FrameBase\Form_Header.xfdl" checksum="20230929083405" errormsg=""/><File url="FrameBase\Server.xjs" checksum="20230928081845" errormsg=""/><File url="FrameBase\ServerAPI.xjs" checksum="20230929103525" errormsg=""/></Info>
+  </GenInfo>
+</root>

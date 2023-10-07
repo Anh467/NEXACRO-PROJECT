@@ -1,0 +1,8 @@
+﻿{
+admin off
+}
+:4100
+{
+root "C:/Users/vietna3/Documents/TOBESOFT/Nexacro N/outputs/NexacroFinalProject"
+file_server
+}

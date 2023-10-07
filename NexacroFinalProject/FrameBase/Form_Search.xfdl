@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Search" width="1300" height="700" titletext="New Form">
+    <Layouts>
+      <Layout height="700" mobileorientation="landscape" width="1300">
+        <Div id="div_Container" taborder="1" left="0" top="0" width="100.00%" height="100%" text="">
+          <Layouts>
+            <Layout>
+              <Grid id="Grid00" taborder="0" left="0" width="100%" binddataset="ds_Track_Working" maxwidth="" fillareatype="none" autofittype="col" onclick="Grid00_onclick" oncellclick="Grid00_oncellclick" border="2px solid #b6b6b6" bottom="0" top="120">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="50"/>
+                      <Column size="70"/>
+                      <Column size="100"/>
+                      <Column size="60"/>
+                      <Column size="80"/>
+                      <Column size="60"/>
+                      <Column size="60"/>
+                      <Column size="80"/>
+                      <Column size="50"/>
+                      <Column size="50"/>
+                      <Column size="50"/>
+                      <Column size="50"/>
+                      <Column size="70"/>
+                      <Column size="30"/>
+                      <Column size="30"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="28" band="head"/>
+                      <Row size="28" band="head"/>
+                      <Row size="24" band="head"/>
+                      <Row size="24"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell rowspan="2" text="Số QD" borderRadius="0px" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="1" rowspan="2" text="Ngày áp dụng" borderRadius="0px" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="2" rowspan="2" text="Họ Tên" borderRadius="0px" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="3" rowspan="2" text="Tình trạng" borderRadius="0px" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="4" rowspan="2" text="Chức vụ" borderRadius="0px" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="5" rowspan="2" text="Bằng cấp" borderRadius="0px" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="6" rowspan="2" text="Bậc áp dụng" borderRadius="0px" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="7" rowspan="2" text="HSL đang huởng" borderRadius="0px" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="8" colspan="3" text="Phụ cấp" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="11" rowspan="2" text="Tổng hệ số" borderRadius="0px" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="12" rowspan="2" text="Ngày nâng lương tiếp theo" borderRadius="0px" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="13" rowspan="2" text="Đang áp dụng" borderRadius="0px" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell col="14" rowspan="2" text="Chọn" border="1px solid #b6b6b6"/>
+                      <Cell row="1" col="8" text="TN vượt khung" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell row="1" col="9" text="Chức vụ" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell row="1" col="10" text="Trách nhiệm" background="#ebebeb" border="1px solid #b6b6b6" wordWrap="english"/>
+                      <Cell row="2" text="expr:this.col +1" suppressalign="first" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="1" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="2" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="3" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="4" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="5" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="6" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="7" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="8" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="9" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="10" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="11" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="12" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="13" text="expr:this.col +1" background="#fff2cc" color="#0000ff"/>
+                      <Cell row="2" col="14" background="#fff2cc" text="expr:this.col +1"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:NUM_QD" border="1px solid #b6b6b6" textAlign="left"/>
+                      <Cell col="1" text="bind:DATE_APPLY" border="1px solid #b6b6b6" textAlign="right" calendardateformat="dd-MM-yyyy" calendareditformat="dd-MM-yyyy" displaytype="date"/>
+                      <Cell col="2" text="bind:NAME" border="1px solid #b6b6b6" textAlign="left"/>
+                      <Cell col="3" text="bind:STATUS" border="1px solid #b6b6b6" textAlign="left"/>
+                      <Cell col="4" text="bind:POSITION" border="1px solid #b6b6b6" textAlign="left"/>
+                      <Cell col="5" text="bind:DEGREE" border="1px solid #b6b6b6" textAlign="left"/>
+                      <Cell col="6" text="bind:LEVEL_APPLY" border="1px solid #b6b6b6" textAlign="center"/>
+                      <Cell col="7" text="expr:COE_SALARY == undefined ? '-': COE_SALARY.toFixed(2)" border="1px solid #b6b6b6" textAlign="center"/>
+                      <Cell col="8" text="expr:(ALLOWANCE_COE_SALARY == undefined ? '0': ALLOWANCE_COE_SALARY.toFixed(2)) + '%'" border="1px solid #b6b6b6" textAlign="right"/>
+                      <Cell col="9" text="expr:ALLOWANCE_POSITION == undefined ? '-   ': ALLOWANCE_POSITION.toFixed(2)" border="1px solid #b6b6b6" textAlign="right"/>
+                      <Cell col="10" text="expr:ALLOWANCE_RESPONSIBILITY == undefined ? '-    ': ALLOWANCE_RESPONSIBILITY.toFixed(2)" border="1px solid #b6b6b6" textAlign="right" expandsize="16"/>
+                      <Cell col="11" text="expr:((COE_SALARY == undefined ? 0: COE_SALARY) * (1+ (ALLOWANCE_COE_SALARY == undefined ? 0: ALLOWANCE_COE_SALARY)/100) + (ALLOWANCE_POSITION == undefined ? 0: ALLOWANCE_POSITION) + (ALLOWANCE_RESPONSIBILITY == undefined ? 0: ALLOWANCE_RESPONSIBILITY)).toFixed(3)" suppressalign="first" border="1px solid #b6b6b6" textAlign="right"/>
+                      <Cell col="12" text="bind:DATE_COE_SALARY_NEXT_RISE" border="1px solid #b6b6b6" textAlign="right" calendareditformat="dd-MM-yyyy" displaytype="date" calendardateformat="dd-MM-yyyy"/>
+                      <Cell col="13" text="expr:String(APPLING) == 'true' ? 'X': ''" border="1px solid #b6b6b6" textAlign="center" font="bold 12px/normal &quot;Malgun Gothic&quot;"/>
+                      <Cell col="14" displaytype="checkboxcontrol" edittype="checkbox" border="1px solid #b6b6b6" text="bind:Delete" checkboxtruevalue="true" checkboxfalsevalue="false" checkboxsize="15"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="div_Search_Input" taborder="0" left="0" top="0" width="100.00%" height="120" text="" background="#ffffff">
+          <Layouts>
+            <Layout>
+              <Div id="Div00" taborder="0" left="0%" top="0" width="100%" height="35" border="1px solid #b0c5e5" text="" background="white" flexgrow="100">
+                <Layouts>
+                  <Layout>
+                    <Div id="Div00" taborder="0" left="46.76%" top="0.00%" width="24.81%" height="100.00%" background="#fffff">
+                      <Layouts>
+                        <Layout>
+                          <Radio id="rdio_Degree" taborder="0" left="26%" top="0%" width="70%" height="100.00%" font="11px/normal &quot;Malgun Gothic&quot;" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" fittocontents="none" direction="vertical">
+                            <Dataset id="innerdataset">
+                              <ColumnInfo>
+                                <Column id="codecolumn" size="256"/>
+                                <Column id="datacolumn" size="256"/>
+                              </ColumnInfo>
+                              <Rows>
+                                <Row>
+                                  <Col id="datacolumn">Đại Học</Col>
+                                  <Col id="codecolumn">UNIVERSITY</Col>
+                                </Row>
+                                <Row>
+                                  <Col id="datacolumn">Trung cấp</Col>
+                                  <Col id="codecolumn">INTERMEDIATE_LEVEL</Col>
+                                </Row>
+                                <Row>
+                                  <Col id="datacolumn">Cao đẳng</Col>
+                                  <Col id="codecolumn">COLLEGE</Col>
+                                </Row>
+                              </Rows>
+                            </Dataset>
+                          </Radio>
+                          <Static id="Static01_00_00_00" taborder="1" text="Bằng cấp" left="0" width="19.80%" height="100.00%" onclick="div_Search_Input_Div00_Static01_00_onclick" background="#d7e6f7" top="0" textAlign="center" border="1px none #b0c5e5, 1px solid #b0c5e5"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                    <Div id="Div01" taborder="1" left="0%" top="0" width="13.79%" height="33" background="white">
+                      <Layouts>
+                        <Layout>
+                          <Static id="Static01" taborder="0" text="Họ Tên" left="0" top="0" width="53" height="100%" background="#d7e6f7" border="1px none #b0c5e5, 1px solid #b0c5e5" textAlign="center"/>
+                          <Edit id="edt_Name" taborder="1" left="58" top="12%" height="78.79%" displaynulltext="Nhập tên" border="1px solid #999999" right="7"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                    <Div id="Div02" taborder="2" left="13.79%" top="0" width="14.41%" height="33" text="" background="white">
+                      <Layouts>
+                        <Layout>
+                          <Static id="Static01_00" taborder="0" text="Số QD" left="0" top="0" width="65" height="100.00%" onclick="div_Search_Input_Div00_Static01_00_onclick" textAlign="center" background="#d7e6f7" border="1px none #b0c5e5, 1px solid #b0c5e5"/>
+                          <Edit id="edt_NumQD" taborder="1" top="9.09%" height="78.79%" displaynulltext="Nhập số QD" border="1px solid #999999" left="71" right="6"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                    <Div id="Div03" taborder="3" left="28.12%" top="0%" height="100.00%" tabstop="true" text="" background="white" width="18.64%">
+                      <Layouts>
+                        <Layout>
+                          <Combo id="cmb_Status" taborder="0" text="Combo00" left="27.98%" top="12.00%" height="78.79%" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" displaynulltext="Chọn tình trạng" width="70%" border="1px solid #999999">
+                            <Dataset id="innerdataset">
+                              <ColumnInfo>
+                                <Column id="codecolumn" size="256"/>
+                                <Column id="datacolumn" size="256"/>
+                              </ColumnInfo>
+                              <Rows>
+                                <Row>
+                                  <Col id="codecolumn">OFFICAL</Col>
+                                  <Col id="datacolumn">Chính thức</Col>
+                                </Row>
+                                <Row>
+                                  <Col id="codecolumn">TEST</Col>
+                                  <Col id="datacolumn">Thử việc</Col>
+                                </Row>
+                                <Row>
+                                  <Col id="codecolumn">PART_TIME</Col>
+                                  <Col id="datacolumn">Bán thời gian</Col>
+                                </Row>
+                              </Rows>
+                            </Dataset>
+                          </Combo>
+                          <Static id="Static01_00_00" taborder="1" text="Tình trạng" left="0" top="0" width="25%" height="100%" onclick="div_Search_Input_Div00_Static01_00_onclick" textAlign="center" background="#d7e6f7" border="1px none #b0c5e5, 1px solid #b0c5e5"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                    <Div id="Div01_00" taborder="4" left="71.65%" top="0.00%" width="17.95%" height="100.00%" background="#FFFFFF" text="">
+                      <Layouts>
+                        <Layout>
+                          <Edit id="edt_Level_From" taborder="0" left="35.04%" top="12%" width="21%" height="78.79%" inputtype="number"/>
+                          <Edit id="edt_Level_To" taborder="1" left="74.79%" top="12%" width="21%" height="78.79%" inputtype="number"/>
+                          <Static id="Static00" taborder="2" text="Bậc" left="0.00%" top="0.00%" width="27.78%" height="100.00%" background="#d7e6f7" textAlign="center" border="1px none #b0c5e5, 1px solid #b0c5e5"/>
+                          <Static id="Static01" taborder="3" text="~" left="edt_Level_From:15.19%" top="4" height="22" font="bold 20px/normal &quot;Malgun Gothic&quot;" right="edt_Level_To:18.91%" textAlign="center"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                    <Div id="Div04" taborder="5" text="Div04" top="0" width="10.25%" height="100.00%" left="89.68%" border="1px solid #b0c5e5">
+                      <Layouts>
+                        <Layout>
+                          <Button id="btn_Delete" taborder="0" text="Delete" left="52.5%" top="0%" width="45%" height="90.00%" icon="url('theme::blue/images/img_WF_Treeexpand.png')" border="1px solid #df6100" borderRadius="7px" background="#ff9d0d" font="bold 12px/normal &quot;Malgun Gothic&quot;" color="white" onclick="div_Search_Input_Div00_Div04_btn_Delete_onclick"/>
+                          <Button id="btn_Clear_Delete" taborder="1" text="Clear" top="0%" width="45%" height="90.00%" icon="url('theme::blue/images/btn_WF_Tabextra.png')" left="2.5%" border="1px solid #df6100" borderRadius="7px" background="#ff9d0d" color="white" font="bold 12px/normal &quot;Malgun Gothic&quot;" onclick="div_Search_Input_Div00_Div04_btn_Clear_Delete_onclick"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div00_00" taborder="1" left="0%" top="35" width="100%" height="35" border="1px solid #b0c5e5" text="" background="#d7e6f7">
+                <Layouts>
+                  <Layout>
+                    <Div id="Div00" taborder="0" left="0%" top="0" width="28.12%" height="100.00%" background="#ffffff" text="">
+                      <Layouts>
+                        <Layout>
+                          <Calendar id="cld_Date_Aply_From" taborder="0" left="98" top="12%" height="78.79%" width="28.22%" border="1px solid #999999"/>
+                          <Calendar id="cld_Date_Aply_To" taborder="1" top="12%" height="78.79%" right="12" width="28.22%" border="1px solid #999999"/>
+                          <Static id="Static00" taborder="2" text="~" top="4" height="23" font="bold 20px/normal &quot;Malgun Gothic&quot;" right="cld_Date_Aply_To:13.33%" left="cld_Date_Aply_From:14.57%" textAlign="center"/>
+                          <Static id="Static01_00" taborder="3" text="Ngày áp dụng" left="0" top="0" width="89" height="100.00%" background="#d7e6f7" border="1px none #b0c5e5, 1px solid #b0c5e5, 1px none #b0c5e5, 1px none #b0c5e5" textAlign="center"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                    <Div id="Div01_00" taborder="1" top="0.00%" width="17.95%" height="100.00%" background="#FFFFFF" text="" left="71.65%">
+                      <Layouts>
+                        <Layout>
+                          <Edit id="edt_Coe_Salary_From" taborder="0" left="35.04%" top="12.00%" width="21%" height="78.79%" inputtype="comma,number"/>
+                          <Edit id="edt_Coe_Salary_To" taborder="1" left="74.79%" top="12%" width="21.00%" height="78.79%" inputtype="comma,number"/>
+                          <Static id="Static00_00" taborder="2" text="HSL" left="0%" top="0%" width="27.78%" height="100.00%" background="#d7e6f7" textAlign="center" border="1px none #b0c5e5, 1px solid #b0c5e5"/>
+                          <Static id="Static00" taborder="3" text="~" left="edt_Coe_Salary_From:15.19%" top="4" height="22" font="bold 20px/normal &quot;Malgun Gothic&quot;" textAlign="center" right="edt_Coe_Salary_To:18.91%"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                    <Div id="Div02" taborder="2" left="28.12%" top="0%" width="18.64%" height="100%" background="white" text="">
+                      <Layouts>
+                        <Layout>
+                          <Edit id="edt_Position" taborder="0" left="28.00%" top="12%" width="70%" height="78.79%" displaynulltext="Nhập chức vụ" onchanged="div_Search_Input_Div00_00_edt_Name_onchanged" border="1px solid #999999"/>
+                          <Static id="Static01" taborder="1" text="Chức vụ" left="0" top="0%" width="25%" height="100%" background="#d7e6f7" border="1px none #b0c5e5, 1px solid #b0c5e5" textAlign="center"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                    <Div id="Div01" taborder="3" text="Div01" top="0" width="10.25%" height="100.00%" left="89.68%" background="white" border="1px solid #b0c5e5">
+                      <Layouts>
+                        <Layout>
+                          <Button id="btn_Clear_Input" taborder="0" text="Clear" left="2.50%" top="0%" width="45%" height="90%" icon="url('theme::blue/images/btn_WF_Tabextra.png')" onclick="div_Search_Input_btn_Clear_Input_onclick" border="1px solid #df6100" borderRadius="7px" background="#ff9d0d" color="white" font="bold 12px/normal &quot;Malgun Gothic&quot;"/>
+                          <Button id="btn_Search" taborder="1" text="Search" left="52.50%" top="0%" width="45%" height="90.00%" icon="url('theme::blue/images/btn_WF_Grdexpand.png')" onclick="div_Search_Input_btn_Search_onclick" border="1px solid #df6100" borderRadius="7px" background="#ff9d0d" color="white" font="bold 12px/normal &quot;Malgun Gothic&quot;"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                    <Div id="Div03" taborder="4" text="Div03" left="46.76%" top="0%" width="24.81%" height="100%" background="white">
+                      <Layouts>
+                        <Layout>
+                          <Static id="Static00" taborder="0" text="Ngày nâng lương" left="0" top="0" width="19.80%" height="100.00%" textAlign="center" background="#d7e6f7" border="1px none #b0c5e5, 1px solid #b0c5e5"/>
+                          <Calendar id="cld_date_next_rise_from" taborder="1" left="Static00:10" top="12%" width="27.95%" height="78.79%" border="1px solid #999999"/>
+                          <Calendar id="cld_date_next_rise_to" taborder="2" top="12%" height="78.79%" right="10" width="27.95%" border="1px solid #999999"/>
+                          <Static id="Static01" taborder="3" text="~" left="cld_date_next_rise_from:18.230000000000018" top="4" height="22" font="bold 20px/normal &quot;Malgun Gothic&quot;" right="cld_date_next_rise_to:16.99199999999999" textAlign="center"/>
+                        </Layout>
+                      </Layouts>
+                    </Div>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="Div01" taborder="2" left="-1" top="81" width="621" height="33" border="1px none black" text="">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static00" taborder="0" text="&gt;" left="9" top="0" width="30" height="30" font="bold 24px/normal &quot;Malgun Gothic&quot;" background="#fca228" textAlign="center" wordSpacing="0px" borderRadius="5px" color="white" boxShadow="-1.5px 1px 0px 1.5px #e27c1c"/>
+                    <Static id="stc_Message" taborder="1" text="Trạng thái thao tác sẽ được hiện ở đây" left="43" top="6" width="565" height="20"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[const NUM_QD= "NUM_QD"
+const DATE_APPLY= "DATE_APPLY"
+const NAME= "NAME"
+const STATUS= "STATUS"
+const POSITION= "POSITION"
+const DEGREE= "DEGREE"
+const LEVEL_APPLY= "LEVEL_APPLY"
+const COE_SALARY= "COE_SALARY"
+const ALLOWANCE_COE_SALARY= "ALLOWANCE_COE_SALARY"
+const ALLOWANCE_POSITION= "ALLOWANCE_POSITION"
+const ALLOWANCE_RESPONSIBILITY= "ALLOWANCE_RESPONSIBILITY"
+const DATE_COE_SALARY_NEXT_RISE= "DATE_COE_SALARY_NEXT_RISE"
+const APPLING= "APPLING"
+const DELETE= "Delete"
+class Employee {
+    constructor(name, numQD, status, degree, 
+        date_apply_from, date_apply_to, position, 
+        level_from, level_to, coe_salary_from, coe_salary_to, date_next_rise_from, date_next_rise_to){
+            this.name = name;
+            this.numQD = numQD;
+			this.status= status
+            this.degree = degree;
+            this.date_apply_from = date_apply_from;
+            this.date_apply_to = date_apply_to;
+            this.position = position;
+            this.level_from = level_from;
+            this.level_to = level_to;
+            this.coe_salary_from = coe_salary_from;
+            this.coe_salary_to = coe_salary_to;
+			this.date_next_rise_from= date_next_rise_from
+			this.date_next_rise_to= date_next_rise_to
+    }
+    toString() {
+        return `Name: ${this.name}\nNumber QD: ${this.numQD}\nStatus: ${this.status}\nDegree: ${this.degree}\nDate Apply From: ${this.date_apply_from}\nDate Apply To: ${this.date_apply_to}\nPosition: ${this.position}\nLevel From: ${this.level_from}\nLevel To: ${this.level_to}\nCOE Salary From: ${this.coe_salary_from}\nCOE Salary To: ${this.coe_salary_to}\nDate Salary next risefrom: ${this.date_next_rise_from}\nDate Salary next rise To: ${this.date_next_rise_to}`;
+      }
+    }
+var component= {
+	edt_Name : this.div_Search_Input.form.Div00.form.Div01.form.edt_Name,
+	edt_NumQD : this.div_Search_Input.form.Div00.form.Div02.form.edt_NumQD,
+	cmb_Status : this.div_Search_Input.form.Div00.form.Div03.form.cmb_Status,
+	rdio_Degree : this.div_Search_Input.form.Div00.form.Div00.form.rdio_Degree,
+	cld_Date_Aply_From :  this.div_Search_Input.form.Div00_00.form.Div00.form.cld_Date_Aply_From,
+	cld_Date_Aply_To :  this.div_Search_Input.form.Div00_00.form.Div00.form.cld_Date_Aply_To,
+	edt_Position : this.div_Search_Input.form.Div00_00.form.Div02.form.edt_Position,
+	edt_Level_From : this.div_Search_Input.form.Div00.form.Div01_00.form.edt_Level_From,
+	edt_Level_To : this.div_Search_Input.form.Div00.form.Div01_00.form.edt_Level_To,
+	edt_Coe_Salary_From : this.div_Search_Input.form.Div00_00.form.Div01_00.form.edt_Coe_Salary_From,
+	edt_Coe_Salary_To : this.div_Search_Input.form.Div00_00.form.Div01_00.form.edt_Coe_Salary_To,
+	cld_date_next_rise_from: this.div_Search_Input.form.Div00_00.form.Div03.form.cld_date_next_rise_from,
+	cld_date_next_rise_to: this.div_Search_Input.form.Div00_00.form.Div03.form.cld_date_next_rise_to
+}
+//handler search
+// Display message
+this.DisplayMessage= function(mess, color)
+{
+	this.div_Search_Input.form.Div01.form.stc_Message.set_text(mess)
+	this.div_Search_Input.form.Div01.form.stc_Message.set_color(color)
+};
+// get string search of each element
+this.GetStrSearch= function (input, id, isStrSearchNotEmpty)
+{
+	var strSearch= ""
+	if (input !== undefined && input !== "" ){
+		if(isStrSearchNotEmpty) strSearch += " && "
+			strSearch += "String("+id+").toLowerCase().trim().indexOf('"+input.toLowerCase().trim()+"')>=0";
+	}
+	return strSearch
+};
+this.GetStrSearchBetweenDate= function (from, to, id, isStrSearchNotEmpty)
+{
+	var strSearch= ""
+	if ( (from !== undefined && from !== "") && (to !== undefined && to !== "") ){
+		if(isStrSearchNotEmpty) strSearch += " && "
+		strSearch += id+" >= '"+from +"' && "+ id+" <= '"+to+"'";
+	}
+	return strSearch
+};
+this.GetStrSearchBetweenFloat= function (from, to, id, isStrSearchNotEmpty)
+{
+	var strSearch= ""
+	if ( (from !== undefined && from !== "") && (to !== undefined && to !== "") ){
+		if(isStrSearchNotEmpty) strSearch += " && "
+		strSearch += id+" >= "+from +" && "+ id+" <= "+to+"";
+	}
+	return strSearch
+};
+//search
+this.SearchHandler= function (input)
+{
+	var strSearch =""
+// 	const NUM_QD= "NUM_QD"
+	strSearch += this.GetStrSearch(input.numQD, NUM_QD, strSearch.length > 0)
+// * const DATE_APPLY= "DATE_APPLY"
+	strSearch += this.GetStrSearchBetweenDate(input.date_apply_from, input.date_apply_to, DATE_APPLY, strSearch.length > 0)
+// 	const NAME= "NAME"
+	strSearch += this.GetStrSearch(input.name, NAME, strSearch.length > 0)
+// 	const STATUS= "STATUS"
+	strSearch += this.GetStrSearch(input.status, STATUS, strSearch.length > 0)
+// 	const POSITION= "POSITION"
+	strSearch += this.GetStrSearch(input.position, POSITION, strSearch.length > 0)
+// 	const DEGREE= "DEGREE"
+	strSearch += this.GetStrSearch(input.degree, DEGREE, strSearch.length > 0)
+// * const LEVEL_APPLY= "LEVEL_APPLY"
+	strSearch += this.GetStrSearchBetweenFloat(input.level_from, input.level_to, LEVEL_APPLY, strSearch.length > 0)
+// * const COE_SALARY= "COE_SALARY"
+ 	strSearch += this.GetStrSearchBetweenFloat(input.coe_salary_from, input.coe_salary_to, COE_SALARY, strSearch.length > 0)
+// const DATE_COE_SALARY_NEXT_RISE= "DATE_COE_SALARY_NEXT_RISE"
+	strSearch += this.GetStrSearchBetweenDate(input.date_next_rise_from, input.date_next_rise_to, DATE_COE_SALARY_NEXT_RISE, strSearch.length > 0)
+/*
+	chưa có component trong form
+	const ALLOWANCE_COE_SALARY= "ALLOWANCE_COE_SALARY"
+ 	const ALLOWANCE_POSITION= "ALLOWANCE_POSITION"
+ 	const ALLOWANCE_RESPONSIBILITY= "ALLOWANCE_RESPONSIBILITY"
+ 	const APPLING= "APPLING"
+*/
+	//trace("check strSearch: "+ strSearch)
+	var ds_Track_Working=  nexacro.getApplication().ds_Track_Working
+	ds_Track_Working.filter(strSearch)
+	return ds_Track_Working.getRowCount()
+};
+// get alll input of user 
+this.GetInputFunction= function ()
+{
+	var name= component.edt_Name.text
+	var numQD= component.edt_NumQD.text
+	var status= component.cmb_Status.text
+	var degree= component.rdio_Degree.text
+	var date_apply_from=  component.cld_Date_Aply_From.value
+	var  date_apply_to=  component.cld_Date_Aply_To.value
+	var position= component.edt_Position.text
+	var level_from= component.edt_Level_From.text
+	var level_to= component.edt_Level_To.text
+	var coe_salary_from = component.edt_Coe_Salary_From.text
+	var coe_salary_to = component.edt_Coe_Salary_To.text
+	var cld_date_next_rise_from= component.cld_date_next_rise_from.value
+	var cld_date_next_rise_to= component.cld_date_next_rise_to.value
+	var emp = new Employee(
+	  name,
+	  numQD,
+	  status,
+	  degree,
+	  date_apply_from,
+	  date_apply_to,
+	  position,
+	  level_from,
+	  level_to,
+	  coe_salary_from,
+	  coe_salary_to,
+	  cld_date_next_rise_from,
+	  cld_date_next_rise_to
+	);
+	trace("Employee: "+emp.toString())
+	return emp
+};
+// clear all input
+this.ClearInputHandler= function(){
+	component.edt_Name.set_value("")
+	component.edt_NumQD.set_value("")
+	component.cmb_Status.set_value("")
+	component.rdio_Degree.set_value("")
+	component.cld_Date_Aply_From.set_value("")
+	component.cld_Date_Aply_To.set_value("")
+	component.edt_Position.set_value("")
+	component.edt_Level_From.set_value("")
+	component.edt_Level_To.set_value("")
+	component.edt_Coe_Salary_From.set_value("")
+	component.edt_Coe_Salary_To.set_value("")
+	component.cld_date_next_rise_from.set_value("")
+	component.cld_date_next_rise_to.set_value("")
+	this.DisplayMessage( "Đã xóa thành công toàn bộ đầu vào", "green")
+}
+// clear all select delete
+this.ClearDeleteHandler= function(){
+	var strNumQD= ""
+	var ds_Track_Working=  nexacro.getApplication().ds_Track_Working
+	ds_Track_Working.filter("")
+	var rowNF= ds_Track_Working.getRowCountNF()
+	for( let i = 0; i < rowNF; i++){
+		var Delete= ds_Track_Working.getColumn(i, DELETE)
+		var numQD= ds_Track_Working.getColumn(i, NUM_QD)
+		if(Delete == "true"){
+			if( strNumQD.length > 0 )
+				strNumQD += ", "
+			strNumQD += numQD
+			ds_Track_Working.setColumn(i, DELETE, "false")
+		}	
+	}
+	this.DisplayMessage("Đã xóa các lựa chọn " + strNumQD +" thành công ", "green")
+}
+// delete
+this.DeleteHandlerFunction= function(index){
+	var ds_Track_Working=  nexacro.getApplication().ds_Track_Working
+	//var index= e.row
+// 	var numQD= ds_Track_Working.getColumn(index, NUM_QD)
+// 	if(confirm("Bạn có chắc xóa Quy Định có mã là "+ numQD)){
+		var intcheck= ds_Track_Working.deleteRow(index);
+		trace("check: "+ intcheck)
+// 		if(intcheck)
+// 			this.DisplayMessage( "Đã xóa thành công Quy Định "+ numQD, "green")
+// 		else this.DisplayMessage( "Có lỗi gì đó xảy ra với việc xóa với Quy Định có mã là "+ numQD, "red")
+	//}
+}
+this.DeletesHandlerFunction= function(){
+	var strNumQD= ""
+	var ds_Track_Working=  nexacro.getApplication().ds_Track_Working
+	ds_Track_Working.filter("")
+	var rowNF= ds_Track_Working.getRowCountNF()
+	for( let i = 0; i < rowNF; i++){
+		var Delete= ds_Track_Working.getColumn(i, DELETE)
+		var numQD= ds_Track_Working.getColumn(i, NUM_QD)
+		if(Delete == "true"){
+			if( strNumQD.length > 0 )
+				strNumQD += ", "
+			strNumQD += numQD
+			
+		}	
+	}
+	if(strNumQD == ""){
+		alert("!!!Bạn phải chọn số quy định để có thể sử dụng chức năng xóa!!!")
+		this.DisplayMessage( "!!!Bạn phải chọn số quy định để có thể sử dụng chức năng xóa!!!", "red")
+		return
+	}
+	if(! confirm(`Bạn có chắc chắn xóa những quy định này ${strNumQD} ?`)){
+		this.DisplayMessage( "Đã hủy xóa những quy định này "+ strNumQD, "green")
+		return;
+	}
+		
+	for( let i = 0; i < rowNF; i++){
+		var Delete= ds_Track_Working.getColumn(i, DELETE)
+		if(Delete == "true"){
+			var numQD= ds_Track_Working.getColumn(i, NUM_QD)
+			//nexacro.getApplication().mainframe.VFrameSet00.HFrameSet00.ChildFrame01.form.MyAPIDeleteHanlder(numQD)
+			this.DeleteHandlerFunction(i)
+			i= i - 1
+			rowNF = rowNF - 1
+		}
+			
+	}
+	this.DisplayMessage( "Đã xóa thành công các quy định này "+ strNumQD, "green")
+}
+// event 
+this.btn_Delete_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var ds_Track_Working=  nexacro.getApplication().ds_Track_Working
+	var nRow =ds_Track_Working.addRow();
+	//var nAdd=ds_Track_Working.set(nRow, "NUM_QD", "NUM QD me ADD");
+	trace("check: "+ nRow)
+	ds_Track_Working.setColumn(nRow, NAME, "ehehhe")
+	//ds_Track_Working.applyChange()
+};
+
+this.Grid00_onclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	trace("check: "+ e.clickitem)
+};
+
+this.Grid00_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	
+	// this.Dataset00.deleteRow(1);
+	//this.DeleteHandlerFunction(e.row)
+};
+this.calculateValue= function(currentRowIndex, currentColumnIndex) {
+    // Your calculation logic here
+    // For example, let's say you want to add 1 to the current column index
+    return currentRowIndex + currentColumnIndex;
+};
+this.div_Search_Input_btn_Search_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var input= this.GetInputFunction()
+	var check= this.SearchHandler(input)
+	if(check== undefined)
+		this.DisplayMessage("!!!Đã có lỗi xảy ra trong quá trình tìm kiếm!!!", "red")
+	else 
+		this.DisplayMessage("Đã tìm kiếm thành công " + check + " kết quả.", "green")
+};
+
+this.div_Search_Input_btn_Clear_Input_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ClearInputHandler()
+};
+
+this.div_Container_Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+
+	fetch('localhost:8080/customer')
+	  .then(response => response.json())
+	  .then(data => {
+		trace(data)
+	  })
+	  .catch(error => {
+		console.error('Lỗi: ', error);
+	  });
+};
+
+this.div_Search_Input_Div00_Div04_btn_Delete_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.DeletesHandlerFunction()
+};
+
+this.div_Search_Input_Div00_Div04_btn_Clear_Delete_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(! confirm("Bạn có muốn xóa các lựa chọn?")){
+		this.DisplayMessage("Đã xóa các lựa chọn thành công " , "green")
+		return 
+	}
+	this.ClearDeleteHandler()
+};
+]]></Script>
+    <Objects>
+      <Dataset id="Dataset00"/>
+      <DataObject id="DataObject00"/>
+    </Objects>
+  </Form>
+</FDL>

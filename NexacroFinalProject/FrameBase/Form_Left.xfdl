@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Left" width="250" height="620" titletext="New Form" onload="Form_Left_onload">
+    <Layouts>
+      <Layout height="620" width="250">
+        <ImageViewer id="ImageViewer00" taborder="0" left="67" top="26" width="126" height="128" image="url('imagerc::icon/sketchbook.png')" stretch="fixaspectratio" border="0px none"/>
+        <Button id="btn_Search" taborder="1" text="Add TabPage Search" left="56" top="194" width="139" height="57" borderRadius="15px" background="#abe1f9" onclick="btn_Search_onclick"/>
+        <Button id="btn_Update" taborder="2" text="Add TabPage Update" left="56" top="273" width="139" height="57" borderRadius="15px" background="#abe1f9" onclick="btn_Update_onclick"/>
+        <Button id="btn_Add" taborder="3" text="Add TabPage Add" left="56" top="350" width="139" height="57" borderRadius="15px" background="#abe1f9" onclick="btn_Add_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[const FRAME_UPDATE = "update"
+const FRAME_SEARCH = "search"
+const FRAME_ADD= "add"
+this.btn_Search_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	nexacro.getApplication().mainframe.VFrameSet00.HFrameSet00.ChildFrame01.form.FuncNewTabPageHandler(FRAME_SEARCH)
+};
+
+this.btn_Update_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	nexacro.getApplication().mainframe.VFrameSet00.HFrameSet00.ChildFrame01.form.FuncNewTabPageHandler(FRAME_UPDATE)
+};
+
+this.btn_Add_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	nexacro.getApplication().mainframe.VFrameSet00.HFrameSet00.ChildFrame01.form.FuncNewTabPageHandler(FRAME_ADD)
+};
+
+this.Form_Left_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var header = {"Content-Type" : "application/x-www-form-urlencoded"};
+	var json_param = {
+		"httpheader" : header,
+		"postdata" : "test",
+		"async" : true
+	}
+	this.DataObject00.request("no2", "GET", "localhost:8080/customer?index=1&limit=10", json_param);
+};
+]]></Script>
+  </Form>
+</FDL>
